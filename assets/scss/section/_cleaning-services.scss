@@ -1,0 +1,13 @@
+.cleaning-services {
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(69px);
+  }
+
+  @media (max-width: 480px) {
+    &__bottom {
+      margin-top: rem(20px);
+    }
+  }
+}

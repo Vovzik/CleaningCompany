@@ -1,0 +1,60 @@
+.tasks-company {
+  &__content {
+    background: #3385FF;
+    padding: rem(29px) 0px rem(40px);
+  }
+
+  &__title {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(24px);
+    color: #FFFFFF;
+    margin-bottom: rem(33px);
+  }
+
+  &__list {
+    li {
+      font-family: 'GolosText', sans-serif;
+      font-weight: 400;
+      line-height: 140%;
+      font-size: rem(18px);
+      color: #FFFFFF;
+      padding-left: rem(45px);
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: rem(20px);
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 50%;
+        border: rem(1px) solid #FFFFFF;
+        width: rem(25px);
+        height: rem(25px);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: rem(5px);
+        left: rem(5px);
+        border-radius: 50%;
+        background: #FFFFFF;
+        width: rem(15px);
+        height: rem(15px);
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__list {
+      li {
+        font-size: rem(14px);
+      }
+    }
+  }
+}
+

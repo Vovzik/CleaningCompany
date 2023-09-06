@@ -1,0 +1,131 @@
+.guarantee-purity {
+  &__content {
+    padding: rem(71px) 0px rem(81px);
+  }
+
+  &__title {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(36px);
+    color: #000;
+    margin-bottom: rem(15px);
+  }
+
+  &__text {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #000;
+    margin-bottom: rem(50px);
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    grid-gap: rem(20px);
+    flex-wrap: wrap;
+    max-width: rem(685px);
+    margin: 0 auto;
+    margin-bottom: rem(57px);
+  }
+
+  &__item {
+    padding: rem(20px);
+    border: rem(2px) solid #1F284E;
+    font-family: 'GolosText', sans-serif;
+    font-weight: 500;
+    line-height: 120%;
+    font-size: rem(18px);
+    color: #1F284E;
+    transition: 0.8s ease-out;
+    border-radius: rem(5px);
+    cursor: pointer;
+    &.active {
+      background: #3385FF;
+      border-color: transparent;
+      color: #FFFFFF;
+    }
+    &:hover {
+      background: #3385FF;
+      border-color: transparent;
+      color: #FFFFFF;
+    }
+  }
+
+  &__tabs-body {
+    transition: 0.8s ease-out;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    &.open {
+      height: auto;
+      overflow: visible;
+      opacity: 1;
+    }
+  }
+
+
+
+  &__body {
+    max-width: rem(693px);
+    margin:  0 auto;
+  }
+
+  &__subtitle {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(32px);
+    color: #000;
+    text-align: center;
+    margin-bottom: rem(15px);
+  }
+
+  &__subtext {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #000;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    &__title {
+      text-align: center;
+      font-size: rem(26px);
+    }
+
+    &__content {
+      padding: rem(30px) 0px;
+    }
+
+    &__subtitle {
+      font-size: rem(26px);
+    }
+
+    &__subtext {
+      font-size: rem(14px);
+    }
+
+    &__item {
+      font-size: rem(14px);
+      padding: rem(10px);
+    }
+
+    &__items {
+      justify-content: center;
+      margin-bottom: rem(20px);
+      grid-gap: rem(10px);
+    }
+
+    &__text {
+      font-size: rem(14px);
+      text-align: center;
+      margin-bottom: rem(20px);
+    }
+  }
+}
+

@@ -1,0 +1,196 @@
+.form {
+  &__content {
+    padding: rem(40px) 0px;
+  }
+
+  &__inner {
+    border: rem(4px) solid #3385FF;
+    padding: rem(75px);
+    display: flex;
+    justify-content: space-between;
+    border-radius: rem(15px);
+  }
+
+  &__info {
+    width: rem(380px);
+    margin-right: rem(30px);
+  }
+
+  &__text {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #000;
+    margin-bottom: rem(25px);
+  }
+
+  &__title {
+    margin-bottom: rem(30px);
+  }
+
+  &__phone {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(20px);
+    color: #000;
+    text-decoration: underline;
+    padding-left: rem(45px);
+    position: relative;
+    &:hover {
+      text-decoration: none;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: rem(39px);
+      height: rem(39px);
+      background: url("../img/form/phone.svg") no-repeat;
+    }
+  }
+
+  &__fields {
+    width: rem(676px);
+  }
+
+  &__fields-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: rem(20px);
+    margin-bottom: rem(27px);
+  }
+
+  &__input {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #000;
+    border-radius: rem(5px);
+    border: rem(1px) solid #A1A1A1;
+    padding: 0px rem(17px);
+    height: rem(59px);
+    background: #F5F5F5;
+    &::placeholder {
+      color: #000;
+    }
+  }
+
+  &__checkbox-input {
+    display: none;
+  }
+
+  &__checkbox-title {
+    cursor: pointer;
+    position: relative;
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(14px);
+    color: #000;
+    padding-left: rem(30px);
+  }
+
+  &__checkbox-link {
+    font-weight: 500;
+    text-decoration: underline;
+    color: #000000;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+
+  &__checkbox-title:before {
+    content: "";
+    display: block;
+    width: rem(24px);
+    height: rem(24px);
+    border: rem(2px) solid #3385FF;
+    position: absolute;
+    top: rem(-3px);
+    left:0px;
+    border-radius: rem(5px);
+  }
+
+  &__checkbox-title::after {
+    content: "";
+    display: block;
+    width: rem(12px);
+    height: rem(14px);
+    position: absolute;
+    top: rem(3px);
+    left: rem(6px);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .1s linear;
+    background: url("../img/form/check.svg") no-repeat ;
+    background-size: rem(12px) rem(14px);
+  }
+
+  &__checkbox-input:checked + &__checkbox-title::after {
+    opacity: 1;
+  }
+
+  &__submit {
+    display: block;
+    min-width: rem(281px);
+    margin-top: rem(42px);
+  }
+
+  @media (max-width: 991px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__info {
+      width: 100%;
+      margin: 0px;
+      margin-bottom: rem(30px);
+    }
+
+    &__fields {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__fields-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+   &__content {
+     padding: rem(30px) 0px;
+   }
+    &__inner {
+      padding: rem(42px) rem(14px) rem(21px);
+    }
+
+    &__text {
+      text-align: center;
+      margin-bottom: rem(19px);
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: rem(24px);
+    }
+
+    &__phone {
+      margin: 0 auto;
+      display: block;
+      width: rem(227px);
+    }
+
+    &__submit {
+      min-width: 100%;
+    }
+  }
+}
+

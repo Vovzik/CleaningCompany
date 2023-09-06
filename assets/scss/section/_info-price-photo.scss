@@ -1,0 +1,121 @@
+.info-price-photo {
+  &__content {
+    padding: rem(42px) 0px;
+    background: url('../img/price/decor.svg') no-repeat;
+    background-position: top right;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__info {
+    width: rem(437px);
+    margin-right: rem(30px);
+    p {
+      font-family: 'GolosText', sans-serif;
+      font-weight: 400;
+      line-height: 140%;
+      font-size: rem(18px);
+      color: #000000;
+      &:not(:last-child) {
+        margin-bottom: rem(35px);
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(36px);
+    color: #000000;
+    margin-bottom: rem(35px);
+  }
+
+  &__socials {
+    background: #3385FF;
+    border-radius: rem(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(16px) rem(29px) rem(16px) rem(33px);
+  }
+
+  &__sms {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #FFFFFF;
+    margin-right: rem(44px);
+  }
+
+
+
+
+  &__icon {
+    transition: 0.4s ease-out;
+  }
+
+  &__social:hover &__icon {
+    transform: scale(1.1);
+  }
+
+  &__images {
+    width: rem(679px);
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: rem(17px);
+  }
+
+  @media (max-width: 991px) {
+    &__images {
+      display: none;
+    }
+
+    &__info {
+      width: 100%;
+      margin: 0px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(30px) 0px;
+    }
+
+    &__title {
+      text-align: center;
+      font-size: rem(26px);
+      margin-bottom: rem(38px);
+    }
+
+    &__info {
+      p {
+        text-align: center;
+        font-size: rem(18px);
+        margin-bottom: rem(38px);
+      }
+    }
+
+    &__socials {
+      flex-direction: column;
+      padding: rem(22px) rem(41px);
+      background: #1F284E;
+    }
+
+    &__sms {
+      margin: 0px;
+      margin-bottom: rem(16px);
+    }
+  }
+
+}

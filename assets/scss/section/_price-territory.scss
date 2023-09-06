@@ -1,0 +1,16 @@
+.price-territory {
+   &__column {
+     width: rem(479px);
+   }
+
+  .price__text {
+    margin-bottom: rem(28px);
+  }
+
+  @media (max-width: 480px) {
+    &__column {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

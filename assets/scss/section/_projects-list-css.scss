@@ -1,0 +1,12 @@
+.projects-list-css {
+  transition: 0.4s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  flex-grow: 1;
+  &.open {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+  }
+}

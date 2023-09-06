@@ -1,0 +1,47 @@
+.home-business {
+
+  .home__item-box {
+    padding: rem(18px);
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .home__subtitle {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 130%;
+    font-size: rem(24px);
+    color: #000;
+    margin-bottom: rem(31px);
+  }
+
+  .home__subtext {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 130%;
+    font-size: rem(14px);
+    color: #000;
+    text-align: left;
+  }
+
+
+  @media (max-width: 480px) {
+    .breadcrumbs {
+      padding: 0px 20px;
+    }
+
+    .home__item-box {
+      padding: rem(20px) rem(5px);
+      text-align: center;
+      align-items: center;
+    }
+
+    .home__subtext {
+      text-align: center;
+    }
+
+    .home__subtitle {
+      font-size: rem(14px);
+    }
+  }
+}

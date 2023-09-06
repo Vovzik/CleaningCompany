@@ -1,0 +1,26 @@
+.cleaning-bank {
+  .types-cleaning-business__item {
+    background: #1F284E;
+    overflow: hidden;
+  }
+
+  .types-cleaning-business__number {
+    width: rem(151px);
+    height: rem(151px);
+    background: #3385FF;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: rem(35px);
+    top: rem(-73px);
+    right: rem(-73px);
+    border: none;
+  }
+
+  .types-cleaning-business__number-inner {
+    width: auto;
+    height: auto;
+    background: transparent;
+  }
+}

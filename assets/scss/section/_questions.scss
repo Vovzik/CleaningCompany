@@ -1,0 +1,43 @@
+.questions {
+  &__content {
+    padding: rem(54px) 0px;
+  }
+
+  &__inner {
+    border: rem(4px) solid #3385FF;
+    border-radius: rem(30px);
+    padding: rem(43px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-family: 'GolosText', sans-serif;
+      font-weight: 400;
+      line-height: 140%;
+      font-size: rem(18px);
+      color: #000;
+      margin-bottom: rem(33px);
+      max-width: rem(887px);
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(30px) 0px;
+    }
+
+    &__btn {
+      font-size: rem(14px);
+    }
+
+    &__inner {
+      padding: rem(20px);
+      p {
+        font-size: rem(14px);
+      }
+    }
+  }
+}
+

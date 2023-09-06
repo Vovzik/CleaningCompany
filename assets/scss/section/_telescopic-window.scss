@@ -1,0 +1,22 @@
+.telescopic-window {
+  .price-window__items {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: rem(10px);
+  }
+
+  .price-window__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .price-window__list {
+    max-width: rem(530px);
+  }
+
+  @media (max-width: 359px) {
+    .price-window__items {
+      grid-template-columns: 1fr;
+    }
+  }
+}

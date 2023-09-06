@@ -1,0 +1,38 @@
+.order-summer-snow {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: rem(16px)
+  }
+
+  &__slider {
+    margin-top: rem(45px);
+  }
+
+  .swiper-slide {
+    &:nth-child(1) {
+      border-color: #D4E5FF;
+    }
+  }
+
+  .order-summer__navigation {
+    display: none;
+  }
+
+  @media (max-width: 1199px) {
+    .order-summer__navigation {
+      display: flex;
+    }
+
+    &__items {
+      display: flex;
+      grid-gap: 0px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .order-summer__navigation {
+      display: none;
+    }
+  }
+}

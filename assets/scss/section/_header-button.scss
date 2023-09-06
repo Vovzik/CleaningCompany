@@ -1,0 +1,17 @@
+.header-button {
+  padding: rem(20px) rem(20px) rem(22px) rem(20px);
+  background: #3385FF;
+  border-radius: rem(5px);
+  font-family: 'GolosText', sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  font-size: rem(14px);
+  color: #fff;
+  transition: 0.4s ease-out;
+  border: rem(1px) solid #3385FF;
+  &:hover {
+    background: transparent;
+    border-color: #3385FF;
+    color: #3385FF;
+  }
+}

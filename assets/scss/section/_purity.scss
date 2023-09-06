@@ -1,0 +1,138 @@
+.purity {
+  &__content {
+    padding: rem(78px) 0px rem(31px);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    width: rem(429px);
+    margin-right: rem(30px);
+
+    p {
+      font-family: 'GolosText', sans-serif;
+      font-weight: 400;
+      line-height: 140%;
+      font-size: rem(18px);
+      color: #000;
+      &:not(:last-child) {
+        margin-bottom: rem(30px);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(32px);
+  }
+
+  &__items {
+    width: rem(697px);
+  }
+
+  &__item {
+    border-radius: rem(30px);
+    background: #3385FF;
+    padding: rem(45px) rem(47px);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: rem(284px) rem(268px);
+    min-height: rem(268px);
+    &:not(:last-child) {
+      margin-bottom: rem(32px);
+    }
+  }
+
+  &__item-info {
+    max-width: rem(357px);
+  }
+
+  &__subtitle {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    font-size: rem(24px);
+    color: #FFFFFF;
+    margin-bottom: rem(32px);
+  }
+
+  &__text {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(16px);
+    color: #FFFFFF;
+  }
+
+  @media (max-width: 1199px) {
+    &__item {
+      background-size: rem(147px);
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__items {
+      width: 100%;
+    }
+
+    &__info {
+      width: 100%;
+      margin: 0px;
+      margin-bottom: rem(25px);
+      p {
+        text-align: center;
+      }
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: rem(25px);
+    }
+
+
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(48px) 0px rem(19px);
+    }
+
+
+    &__info {
+       p {
+         font-size: rem(14px);
+       }
+    }
+
+
+    &__item {
+      padding: rem(21px) rem(18px);
+      border-radius: rem(12px);
+      min-height: auto;
+      background-size: rem(122px);
+      &:not(:last-child) {
+        margin-bottom: rem(8px);
+      }
+    }
+
+    &__item-info {
+      max-width: rem(226px);
+    }
+
+    &__subtitle {
+      font-size: rem(18px);
+      margin-bottom: rem(8px);
+    }
+
+    &__text {
+      font-size: rem(12px);
+    }
+  }
+}
+

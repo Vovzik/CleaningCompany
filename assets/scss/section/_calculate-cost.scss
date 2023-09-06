@@ -1,0 +1,248 @@
+
+.calculate-cost {
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+
+  .noUi-target {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    background: #FFFFFF;
+    max-width: rem(555px);
+    padding-left: rem(18px);
+  }
+
+  .noUi-handle-lower {
+    top: rem(-18px);
+  }
+
+  .noUi-horizontal {
+    height: rem(4px);
+  }
+
+
+  .noUi-handle:before {
+    display: none;
+  }
+
+  .noUi-handle:after {
+    display: none;
+  }
+
+  .noUi-handle {
+    background: #F2F2F2;
+    border: 1px solid #C41E3A;
+    border-radius: 50%;
+  }
+
+  .noUi-horizontal .noUi-handle {
+    width: rem(36px);
+    height: rem(36px);
+    border: none;
+  }
+
+  .noUi-connect {
+    background: #C41E3A;
+  }
+
+
+
+  &__content {
+    padding: rem(64px) 0px rem(89px);
+    background: #1F284E;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    width: rem(653px);
+    margin-right: rem(30px);
+  }
+
+  &__title {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    font-size: rem(36px);
+    color: #FFFFFF;
+    max-width: rem(449px);
+    margin-bottom: rem(42px);
+  }
+
+  &__item {
+
+  }
+
+  &__subtitle {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #AECEFF;
+    margin-bottom: rem(22px);
+  }
+
+  &__nouislider {
+  }
+
+  &__input-box {
+    display: flex;
+    align-items: center;
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(16px);
+    color: #FFFFFF;
+    margin-top: rem(22px);
+    margin-bottom: rem(19px);
+  }
+
+  &__input {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(16px);
+    color: #FFFFFF;
+    width: rem(30px);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: rem(61px);
+    margin-top: rem(32px);
+  }
+
+  &__column2 {
+    width: rem(392px);
+    margin-top: rem(54px);
+  }
+
+  &__text {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #AECEFF;
+  }
+
+  &__output {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 500;
+    line-height: 120%;
+    font-size: rem(96px);
+    color: #FFFFFF;
+    margin-bottom: rem(55px);
+    display: block;
+  }
+
+  &__btn {
+  }
+
+  &__btn:hover {
+    border-color: #3385FF;
+    background: #3385FF;
+    color: #FFFFFF;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 991px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__column {
+      margin-right: 0px;
+      margin-bottom: rem(20px);
+      width: 100%;
+    }
+
+    &__column2 {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(50px) 0px;
+    }
+
+    &__column {
+      margin-bottom: rem(39px);
+    }
+
+
+    &__column2 {
+      margin-top: 0px;
+      text-align: center;
+    }
+
+    &__text {
+      font-size: rem(18px);
+      margin-bottom: rem(22px);
+    }
+
+    &__output {
+      font-size: rem(45px);
+      margin-bottom: rem(23px);
+    }
+
+
+    &__input-box {
+      margin: rem(13px) 0px rem(23px);
+      font-size: rem(12px);
+    }
+
+    &__input {
+      font-size: rem(12px);
+    }
+
+    &__items {
+      margin-top: rem(27px);
+      grid-template-columns: 1fr;
+      grid-gap: rem(10px);
+    }
+
+    &__subtitle {
+      font-size: rem(12px);
+      margin-bottom: rem(25px);
+    }
+
+    .noUi-horizontal .noUi-handle {
+      width: rem(31px);
+      height: rem(31px);
+    }
+
+    .noUi-horizontal {
+      height: rem(2px);
+    }
+
+    .noUi-horizontal {
+      padding-left: rem(13px);
+      padding-right: rem(13px);
+    }
+
+    .noUi-handle-lower {
+      top: rem(-15px);
+    }
+
+    &__title {
+      max-width: 100%;
+      text-align: center;
+      font-size: rem(24px);
+      margin-bottom: rem(23px);
+    }
+  }
+}
+
+

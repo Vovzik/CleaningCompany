@@ -1,0 +1,18 @@
+.button-blue {
+  padding: rem(16px) rem(28px);
+  border-radius: rem(5px);
+  background: #3385FF;
+  text-align: center;
+  transition: 0.4s;
+  border: rem(2px) solid transparent;
+  font-family: 'GolosText', sans-serif;
+  font-weight: 500;
+  line-height: 140%;
+  font-size: rem(16px);
+  color: #FFFFFF;
+  &:hover {
+    border-color: #1F284E;
+    background: transparent;
+    color: #1F284E;
+  }
+}

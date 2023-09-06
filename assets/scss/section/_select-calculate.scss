@@ -1,0 +1,99 @@
+.select-calculate {
+  position: relative;
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: rem(21px) rem(35px) rem(21px) rem(21px);
+    transition: 0.1s;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: rem(5px);
+  }
+
+  &__trigger span {
+    display: block;
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(16px);
+    color: #000000;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: rem(27px);
+    right: rem(21px);
+  }
+
+  &__arrow svg {
+    transform: rotate(0deg);
+  }
+
+  &__trigger.active &__arrow svg {
+    transform: rotate(180deg);
+  }
+
+
+  &__label {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #AECEFF;
+    margin-bottom: rem(25px);
+  }
+
+  &__drop {
+    display: none;
+    width: 100%;
+    padding: rem(10px) 0;
+    background-color: #fff;
+    border-top: none;
+    position: absolute;
+    z-index: 10;
+    border-radius: rem(5px);
+    margin-top: rem(10px);
+  }
+
+  &__drop.open {
+    display: block;
+  }
+
+  &__list {
+    max-height: 320px;
+    overflow-y: auto;
+  }
+
+  &__list input {
+    display: none;
+  }
+
+  &__list label {
+    display: block;
+    padding: rem(5px) rem(20px);
+    margin-bottom: 0;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(16px);
+    color: #000000;
+  }
+
+  &__list input:checked + label {
+    background-color: #1F284E;
+    color: #fff;
+  }
+
+  @media (max-width: 480px) {
+    &__label {
+      font-size: rem(14px);
+      margin-bottom: rem(10px);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.projects-navigation-css {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.projects-prev-css,
+.projects-next-css {
+  width: rem(40px);
+  height: rem(40px);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.projects-prev-css {
+  background: #29325B url("../img/projects/prev.svg") no-repeat;
+  background-position: center;
+}
+
+.projects-next-css {
+  background: #29325B url("../img/projects/next.svg") no-repeat;
+  background-position: center;
+}

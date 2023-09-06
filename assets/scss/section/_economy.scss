@@ -1,0 +1,162 @@
+.economy {
+  &__content {
+    padding: rem(64px) 0px rem(73px);
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: rem(61px);
+  }
+
+  &__title {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(36px);
+    color: #000;
+    width: rem(484px);
+    margin-right: rem(50px);
+  }
+
+  &__btn {
+    background: #3385FF;
+    border-radius: rem(5px);
+    padding: rem(10px) rem(32px) rem(13px) rem(20px);
+    position: relative;
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 120%;
+    font-size: rem(16px);
+    color: #fff;
+    transition: 0.4s;
+    margin-top: rem(18px);
+    &:before {
+      content: '';
+      position: absolute;
+      right: rem(16px);
+      top: rem(16px);
+      width: rem(10px);
+      height: rem(10px);
+      background: url('../img/economy/arrow.svg') no-repeat;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__blockquote {
+    background: #1F284E;
+    border-radius: rem(30px) rem(5px) rem(96px) rem(30px);
+    padding: rem(27px) rem(91px);
+    max-width: rem(1022px);
+    position: relative;
+    display: block;
+    p {
+      font-family: 'GolosText', sans-serif;
+      font-weight: 400;
+      line-height: 137%;
+      font-size: rem(16px);
+      color: #FFFFFF;
+     &:not(:last-child) {
+       margin-bottom: rem(28px);
+     }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: rem(33px);
+      left: rem(27px);
+      width: rem(38px);
+      height: rem(38px);
+      border-radius: 50%;
+      background: #FFFFFF url('../img/economy/decor.svg') no-repeat;
+      background-position: center;
+      background-size: rem(17px) rem(13px);
+    }
+
+  }
+
+  &__director {
+    position: relative;
+    display: block;
+    padding-left: rem(54px);
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(16px);
+    color: #FFFFFF;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: rem(9px);
+      width: rem(48px);
+      height: rem(1px);
+      background: #FFFFFF;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(36px) 0px rem(27px);
+      background-image: none !important;
+    }
+
+    &__blockquote {
+      padding: rem(20px) rem(40px) rem(33px) rem(40px);
+    }
+
+    &__blockquote:before {
+      width: rem(21px);
+      height: rem(21px);
+      background: #FFFFFF url('../img/economy/decor.svg') no-repeat;
+      background-size: rem(10px) rem(10px);
+      background-position: center;
+      top: rem(20px);
+      left: rem(13px);
+    }
+
+    &__blockquote p {
+      font-size: rem(16px);
+      text-align: center;
+    }
+
+    &__blockquote p:not(:last-child) {
+      margin-bottom: rem(25px);
+    }
+
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: rem(25px);
+    }
+
+
+     &__title {
+       max-width: 100%;
+       text-align: center;
+       font-size: rem(26px);
+       margin-right: 0px;
+       margin-bottom: rem(25px);
+     }
+
+     &__btn {
+       margin: 0px;
+       font-size: rem(14px);
+       padding: rem(13px) rem(50px) rem(13px) rem(37px) ;
+     }
+  }
+
+  @media (max-width: 359px) {
+    &__blockquote {
+      padding: rem(20px) rem(20px) rem(33px) rem(20px);
+    }
+  }
+}
+

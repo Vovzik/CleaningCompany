@@ -1,0 +1,231 @@
+.cleaning-business {
+  .cleaning__content {
+    background: rgba(243, 243, 245, 1);
+    padding-top: rem(78px);
+  }
+  .cleaning__inner {
+    padding-bottom: rem(70px);
+    margin-bottom: 0px;
+  }
+
+  .cleaning__title {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .cleaning__item {
+    &:nth-child(1) {
+      top: rem(115px);
+      left:   rem(523px);
+    }
+    &:nth-child(2) {
+      top: rem(78px);
+      left:   rem(846px);
+    }
+    &:nth-child(3) {
+      top: rem(70px);
+      left:   rem(1231px);
+    }
+
+    &:nth-child(4) {
+      top: rem(273px);
+      left:   rem(408px);
+    }
+    &:nth-child(5) {
+      top: rem(211px);
+      left:   rem(798px);
+    }
+
+    &:nth-child(6) {
+      top: rem(262px);
+      left:   rem(1215px);
+    }
+
+    &:nth-child(7) {
+      top: rem(430px);
+      left:   rem(538px);
+    }
+
+    &:nth-child(8) {
+      top: rem(334px);
+      left:   rem(787px);
+    }
+
+    &:nth-child(9) {
+      top: rem(460px);
+      left:   rem(1106px);
+    }
+
+    &:nth-child(10) {
+      top: rem(548px);
+      left:   rem(428px);
+    }
+
+    &:nth-child(11) {
+      top: rem(558px);
+      left:   rem(825px);
+    }
+
+  }
+
+  .cleaning__open {
+    padding: rem(10px);
+    padding-left: rem(20px);
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: rem(22px);
+      left: rem(10px);
+      border-radius: 50%;
+      width: rem(3px);
+      height: rem(3px);
+      background: #000000;
+    }
+  }
+
+  .cleaning__item .cleaning__open {
+    bottom: auto;
+    top: rem(10px);
+    left: rem(11px);
+    width: rem(250px);
+    border-radius: rem(0px) rem(62px) rem(62px) rem(50px);
+  }
+
+  @media (max-width: 1550px) {
+    .cleaning__item {
+      &:nth-child(1) {
+        top: rem(115px);
+        left:   rem(20px);
+      }
+      &:nth-child(2) {
+        top: rem(40px);
+        left:   rem(200px);
+        z-index: 1;
+      }
+      &:nth-child(3) {
+        top: rem(70px);
+        left:   rem(400px);
+      }
+
+      &:nth-child(4) {
+        top: rem(273px);
+        left:   rem(400px);
+      }
+      &:nth-child(5) {
+        top: rem(211px);
+        left:   rem(400px);
+      }
+
+      &:nth-child(6) {
+        top: rem(262px);
+        left:   rem(600px);
+      }
+
+      &:nth-child(7) {
+        top: rem(430px);
+        left:   rem(538px);
+        z-index: 1;
+      }
+
+      &:nth-child(8) {
+        top: rem(334px);
+        left:   rem(787px);
+      }
+
+      &:nth-child(9) {
+        top: rem(460px);
+        left:   rem(700px);
+      }
+
+      &:nth-child(10) {
+        top: rem(548px);
+        left:   rem(428px);
+      }
+
+      &:nth-child(11) {
+        top: rem(558px);
+        left:   rem(825px);
+      }
+
+    }
+  }
+
+  @media (max-width: 1128px) {
+    .cleaning__item {
+      &:nth-child(1) {
+        top: rem(40px);
+        left: rem(20px);
+      }
+
+      &:nth-child(2) {
+        top: rem(100px);
+        left: rem(20px);
+        z-index: 1;
+      }
+
+      &:nth-child(3) {
+        top: rem(160px);
+        left: rem(20px);
+      }
+
+      &:nth-child(4) {
+        top: rem(220px);
+        left: rem(20px);
+      }
+
+      &:nth-child(5) {
+        top: rem(280px);
+        left: rem(20px);
+      }
+
+      &:nth-child(6) {
+        top: rem(340px);
+        left: rem(20px);
+      }
+
+      &:nth-child(7) {
+        top: rem(400px);
+        left: rem(20px);
+        z-index: 1;
+      }
+
+      &:nth-child(8) {
+        top: rem(460px);
+        left: rem(20px);
+      }
+
+      &:nth-child(9) {
+        top: rem(520px);
+        left: rem(20px);
+      }
+
+      &:nth-child(10) {
+        top: rem(580px);
+        left: rem(20px);
+      }
+
+      &:nth-child(11) {
+        top: rem(640px);
+        left: rem(20px);
+      }
+    }
+
+    .cleaning__box {
+      height: rem(700px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cleaning__content {
+      padding-top: rem(30px);
+    }
+
+    .cleaning__inner {
+      padding-bottom: rem(30px);
+    }
+  }
+
+
+}
