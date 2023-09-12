@@ -68,6 +68,31 @@
     display: none;
   }
 
+  &__list {
+    li {
+      font-family: 'GolosText', sans-serif;
+      font-weight: 400;
+      line-height: 140%;
+      font-size: rem(18px);
+      color: #000;
+      position: relative;
+      padding-left: rem(10px);
+      &:not(:last-child) {
+        margin-bottom: rem(10px);
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: rem(11px);
+        left: 0px;
+        width: rem(5px);
+        height: rem(5px);
+        border-radius: 50%;
+        background: #000000;
+      }
+    }
+  }
+
   @media (max-width: 1199px) {
     &__box {
       height: rem(415px);
@@ -107,6 +132,18 @@
    &__content {
      padding: rem(40px) 0px;
    }
+
+    &__list {
+      li {
+        text-align: left;
+        font-size: rem(14px);
+        &:before {
+          width: rem(3px);
+          height: rem(3px);
+          top: rem(10px);
+        }
+      }
+    }
 
     &__box {
       padding: rem(30px);

@@ -1,129 +1,57 @@
 <?php
-//Template Name: Уборка офисов
+//Template Name: Мойка витрин в торговых центрах
 ?>
 
-
 <?php get_header(); ?>
-
 <main class="main">
-    <section class="home home-office">
+    <section class="home home-business">
         <div class="home__content" style="
-                background-image: url('<?php bloginfo('template_url'); ?>/assets/img/home/decor.png');
-                ">
-
+            background-image: url('<?php bloginfo('template_url'); ?>/assets/img/home/decor2.png');
+            ">
             <div class="container home__container">
-                <?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(); ?>
+                <ul class="breadcrumbs">
+                    <li><a href="#">Главная / </a></li>
+                    <li><a href="#">Главная / </a></li>
+                    <li><a href="#">Главная / </a></li>
+                    <li>Профессиональная уборка офисов</li>
+                </ul>
                 <div class="home__inner">
-                    <div class="home-office__info">
+                    <img class="home__fonmobail" src="<?php bloginfo('template_url'); ?>/assets/img/home/mobailFon.jpg"
+                         alt="alt">
+                    <h1 class="home__title">
+                        Уборка бизнес центров в Санкт-Петербурге от 11 500 ₽/мес.
+                    </h1>
+                    <p class="home__text">
+                        Мы оказываем весь комплекс клининговых работ в бизнес-центрах. Учитываем все ваши пожелания. Вы
+                        сами можете выбрать задачи, отказавшись от тех, которые вам не нужны, или наоборот добавить
+                        дополнительные.
+                    </p>
 
-
-                        <img class="home__fonmobail"
-                             src="<?php bloginfo('template_url'); ?>/assets/img/home/mobailFon.jpg"
-                             alt="alt">
-                        <h1 class="home__title">
-                            Профессиональная уборка офисов в городе Санкт-Петербург от 40 ₽/м2
-                        </h1>
-                        <p class="home__text">
-                            Уберемся в офисе после ремонта, переезда или корпоратива. Поддержим ежедневную чистоту.
-                        </p>
-
-                        <div class="home__buttons">
-                            <a class="home__button" href="#">
-                                Заказать уборку
-                            </a>
-                            <a class="home__button home__button__border" href="#">
-                                Пригласить на тендер
-                            </a>
-                        </div>
+                    <div class="home__buttons">
+                        <a class="home__button" href="#">
+                            Заказать уборку
+                        </a>
+                        <a class="home__button home__button__border" href="#">
+                            Пригласить на тендер
+                        </a>
                     </div>
-                    <form class="home-office__form">
-                        <div class="home-office__box">
-                            <div class="home-office__text">
-                                Тип услуги
-                            </div>
-                            <div class="select">
-                                <div class="select__trigger">
-                                    <span>Ежедневная</span>
-                                    <div class="select__arrow">
-                                        <svg width="8" height="11" viewBox="0 0 8 11" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.64645 10.3536C3.84171 10.5488 4.15829 10.5488 4.35355 10.3536L7.53553 7.17157C7.7308 6.97631 7.7308 6.65973 7.53553 6.46447C7.34027 6.2692 7.02369 6.2692 6.82843 6.46447L4 9.29289L1.17157 6.46447C0.97631 6.2692 0.659728 6.2692 0.464466 6.46447C0.269204 6.65973 0.269204 6.97631 0.464466 7.17157L3.64645 10.3536ZM3.5 -2.18557e-08L3.5 10L4.5 10L4.5 2.18557e-08L3.5 -2.18557e-08Z"
-                                                  fill="black"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="select__drop">
-                                    <ul class="select__list select__scroll">
-                                        <li>
-                                            <input id="select_0" type="radio" name="select"/>
-                                            <label for="select_0">Индивидуальный предприниматель</label>
-                                        </li>
-                                        <li>
-                                            <input id="select_1" type="radio" name="select"/>
-                                            <label for="select_1">ООО</label>
-                                        </li>
-                                        <li>
-                                            <input id="select_2" type="radio" name="select"/>
-                                            <label for="select_2">Физ. лицо</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="home-office__box">
-                            <div class="home-office__text">
-                                Площадь
-                            </div>
-                            <div class="home-office__box-input">
-                                <input class="home-office__input" placeholder="67" type="number">
-                                <div class="home-office__m2">
-                                    м2
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="home-office__box">
-                            <div class="home-office__text">
-                                Телефон:
-                            </div>
-                            <div class="home-office__box-input">
-                                <input class="home-office__input phone" placeholder="+7" type="tel">
-                            </div>
-                        </div>
-                        <div class="home-office__inner-bottom">
-                            <div class="home-office__info-price">
-                                <output class="home-office__output">
-                                    10 000 ₽
-                                </output>
-                                <div class="home-office__output-text">
-                                    Финальный расчет делается индивидуально
-                                </div>
-                            </div>
-                            <button class="home-office__btn" type="submit">
-                                Запросить рассчет
-                            </button>
-                        </div>
-                    </form>
                 </div>
                 <div class="home__items">
                     <div class="home__item">
                         <div class="home__item-box">
                             <h2 class="home__subtitle">
-                                от 11 руб./м²
+                                от 11 500 руб./мес.
                             </h2>
                             <p class="home__subtext">
-                                Более 7500 выполненных заказов
+                                Цена уборки коммерческого помещения до 100 м²
                             </p>
                         </div>
                     </div>
                     <div class="home__item">
                         <div class="home__item-box">
                             <h2 class="home__subtitle">
-                                Рассрочка платежа
+                                Работаем по ГОСТ Р 51870-2014
                             </h2>
-                            <p class="home__subtext">
-                                Гарантия качества и сохранности вашего имущества в договоре.
-                            </p>
                         </div>
                     </div>
                     <div class="home__item">
@@ -132,17 +60,18 @@
                                 12% скидка
                             </h2>
                             <p class="home__subtext">
-                                Бесплатный выезд на место и оценка объекта
+                                По кодовой фразе “CleanUp круглый год” предоставим 12% скидку по договору на годовое
+                                обслуживание
                             </p>
                         </div>
                     </div>
                     <div class="home__item">
                         <div class="home__item-box">
                             <h2 class="home__subtitle">
-                                Бесплатный выезд
+                                НДС
                             </h2>
                             <p class="home__subtext">
-                                За результат после уборки, любым удобным способом. Без предоплаты.
+                                Можем предложить варианты работы, как с НДС, так и без
                             </p>
                         </div>
                     </div>
@@ -150,385 +79,233 @@
             </div>
         </div>
     </section>
-    <section class="quiz">
-        <div class="quiz__content">
+    <section class="standard-sink">
+        <div class="standard-sink__content">
             <div class="container">
-                <form action="#">
-                    <div class="quiz__inner">
-                        <h2 class="quiz__title">
-                            Ответьте на 6 простых вопросов по объекту
-                        </h2>
-                        <p class="quiz__text">
-                            После чего с Вами свяжется менеджер с расчетом стоимости и вариантами сотрудничества.
-                        </p>
-                    </div>
-                    <div class="quiz__form quiz-form-js active">
-                        <div class="quiz__form-inner">
-                            <h3 class="quiz__subtitle">
-                                1. Какой тип уборки необходим?
-                            </h3>
-                            <div class="quiz__btn quiz-btn-js">
-                                Далее
-                            </div>
-                        </div>
-                        <div class="quiz__items">
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio" name="radio" checked>
-                                <label for="radio" class="quiz__radio-title">
-                                    <div class="quiz__box">
-                                        <img class="quiz__img"
-                                             src="<?php bloginfo('template_url'); ?>/assets/img/quiz/1.png" alt="alt">
-                                    </div>
-                                    <h4 class="quiz__radio-title-b">
-                                        Ежедневная уборка офисов
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio2" name="radio">
-                                <label for="radio2" class="quiz__radio-title">
-                                    <div class="quiz__box">
-                                        <img class="quiz__img"
-                                             src="<?php bloginfo('template_url'); ?>/assets/img/quiz/2.png" alt="alt">
-                                    </div>
-                                    <h4 class="quiz__radio-title-b">
-                                        Генеральная уборка офисов
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio3" name="radio">
-                                <label for="radio3" class="quiz__radio-title">
-                                    <div class="quiz__box">
-                                        <img class="quiz__img"
-                                             src="<?php bloginfo('template_url'); ?>/assets/img/quiz/3.png" alt="alt">
-                                    </div>
-                                    <h4 class="quiz__radio-title-b">
-                                        Генеральная уборка офисов после ремонта
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio4" name="radio">
-                                <label for="radio4" class="quiz__radio-title">
-                                    <div class="quiz__box">
-                                        <img class="quiz__img"
-                                             src="<?php bloginfo('template_url'); ?>/assets/img/quiz/4.png" alt="alt">
-                                    </div>
-                                    <h4 class="quiz__radio-title-b">
-                                        Разовая уборка офисов после мероприятия
-                                    </h4>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="quiz__buttons quiz__buttons-mobail">
-                            <div class="quiz__btn quiz-btn-mobail-js">
-                                Далее
-                            </div>
-                        </div>
-                    </div>
-                    <div class="quiz__form quiz__square quiz-form-js">
-                        <div class="quiz__form-inner">
-                            <h3 class="quiz__subtitle">
-                                2. Примерная площадь?
-                            </h3>
-                            <div class="quiz__buttons">
-                                <div class="quiz__btn quiz-back-js">
-                                    Назад
-                                </div>
-                                <div class="quiz__btn quiz-btn-js">
-                                    Далее
-                                </div>
-                            </div>
-                        </div>
-                        <div class="quiz__items">
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio5" name="radio1" checked>
-                                <label for="radio5" class="quiz__radio-title">
-                                    <h4 class="quiz__radio-title-b">
-                                        До 100 м2
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio6" name="radio1">
-                                <label for="radio6" class="quiz__radio-title">
-                                    <h4 class="quiz__radio-title-b">
-                                        До 100-300 м2
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio7" name="radio1">
-                                <label for="radio7" class="quiz__radio-title">
-                                    <h4 class="quiz__radio-title-b">
-                                        До 300-700 м2
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio8" name="radio1">
-                                <label for="radio8" class="quiz__radio-title">
-                                    <h4 class="quiz__radio-title-b">
-                                        Более 700 м2
-                                    </h4>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="quiz__buttons quiz__buttons-mobail">
-                            <div class="quiz__btn quiz-back-mobail-js">
-                                Назад
-                            </div>
-                            <div class="quiz__btn quiz-btn-mobail-js">
-                                Далее
-                            </div>
-                        </div>
-                    </div>
-                    <div class="quiz__form quiz-form-js">
-                        <div class="quiz__form-inner">
-                            <h3 class="quiz__subtitle">
-                                3. Что необходимо сделать?
-                            </h3>
-                            <div class="quiz__buttons">
-                                <div class="quiz__btn quiz-back-js">
-                                    Назад
-                                </div>
-                                <div class="quiz__btn quiz-btn-js">
-                                    Далее
-                                </div>
-                            </div>
-                        </div>
-                        <div class="quiz__items">
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio9" name="radio2" checked>
-                                <label for="radio9" class="quiz__radio-title">
-                                    <div class="quiz__box">
-                                        <img class="quiz__img"
-                                             src="<?php bloginfo('template_url'); ?>/assets/img/quiz/1.png" alt="alt">
-                                    </div>
-                                    <h4 class="quiz__radio-title-b">
-                                        Ежедневная уборка офисов
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio10" name="radio2">
-                                <label for="radio10" class="quiz__radio-title">
-                                    <div class="quiz__box">
-                                        <img class="quiz__img"
-                                             src="<?php bloginfo('template_url'); ?>/assets/img/quiz/2.png" alt="alt">
-                                    </div>
-                                    <h4 class="quiz__radio-title-b">
-                                        Генеральная уборка офисов
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio11" name="radio2">
-                                <label for="radio11" class="quiz__radio-title">
-                                    <div class="quiz__box">
-                                        <img class="quiz__img"
-                                             src="<?php bloginfo('template_url'); ?>/assets/img/quiz/3.png" alt="alt">
-                                    </div>
-                                    <h4 class="quiz__radio-title-b">
-                                        Генеральная уборка офисов после ремонта
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio12" name="radio2">
-                                <label for="radio12" class="quiz__radio-title">
-                                    <div class="quiz__box">
-                                        <img class="quiz__img"
-                                             src="<?php bloginfo('template_url'); ?>/assets/img/quiz/4.png" alt="alt">
-                                    </div>
-                                    <h4 class="quiz__radio-title-b">
-                                        Разовая уборка офисов после мероприятия
-                                    </h4>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="quiz__buttons quiz__buttons-mobail">
-                            <div class="quiz__btn quiz-back-mobail-js">
-                                Назад
-                            </div>
-                            <div class="quiz__btn quiz-btn-mobail-js">
-                                Далее
-                            </div>
-                        </div>
-                    </div>
-                    <div class="quiz__form quiz__square quiz-form-js">
-                        <div class="quiz__form-inner">
-                            <h3 class="quiz__subtitle">
-                                4. Особенности объекта
-                            </h3>
-                            <div class="quiz__buttons">
-                                <div class="quiz__btn quiz-back-js">
-                                    Назад
-                                </div>
-                                <div class="quiz__btn quiz-btn-js">
-                                    Далее
-                                </div>
-                            </div>
-                        </div>
-                        <div class="quiz__items">
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio13" name="radio3" checked>
-                                <label for="radio13" class="quiz__radio-title">
-                                    <h4 class="quiz__radio-title-b">
-                                        Пропускной режим
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio14" name="radio3">
-                                <label for="radio14" class="quiz__radio-title">
-                                    <h4 class="quiz__radio-title-b">
-                                        Нужно убрать срочно
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio15" name="radio3">
-                                <label for="radio15" class="quiz__radio-title">
-                                    <h4 class="quiz__radio-title-b">
-                                        Нужна выездная оценка
-                                    </h4>
-                                </label>
-                            </div>
-                            <div class="quis__item">
-                                <input type="radio" class="quiz__radio-input" id="radio16" name="radio3">
-                                <label for="radio16" class="quiz__radio-title">
-                                    <h4 class="quiz__radio-title-b">
-                                        Объект за пределами города
-                                    </h4>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="quiz__buttons quiz__buttons-mobail">
-                            <div class="quiz__btn quiz-back-mobail-js">
-                                Назад
-                            </div>
-                            <div class="quiz__btn quiz-btn-mobail-js">
-                                Далее
-                            </div>
-                        </div>
-                    </div>
-                    <div class="quiz__form quiz-form-js">
-                        <div class="quiz__form-inner">
-                            <h3 class="quiz__subtitle">
-                                5. Ваши контакты для связи
-                            </h3>
-                            <div class="quiz__btn quiz-back-js">
-                                Назад
-                            </div>
-                        </div>
-                        <div class="quiz__form-box">
-                            <input class="quiz__form-input" type="text" placeholder="Имя">
-                            <input class="quiz__form-input" type="text" placeholder="Телефон">
-                            <button class="quiz__btn" type="submit">
-                                Отправить
-                            </button>
-                        </div>
-                        <div class="quiz__buttons quiz__buttons-mobail">
-                            <div class="quiz__btn quiz-back-mobail-js">
-                                Назад
-                            </div>
-                        </div>
-                    </div>
-                </form>
+               <div class="standard-sink__inner">
+                   <h2 class="standard-sink__title">
+                       Рестораны, бутики, кафе, магазины и другие заведения просто не могут позволить себе иметь неопрятную витрину, мешающую детально рассмотреть разложенные внутри товары. Кофейнями с панорамным видом просто не положено иметь грязную витрину! Увидев пятна на окне, многие клиенты скорее пройдут мимо, в поисках более опрятного заведения.
+                   </h2>
+                   <h3 class="standard-sink__subtitle">
+                       Стандартная мойка витрин и окон включает:
+                   </h3>
+                   <ul class="standard-sink__list">
+                       <li>
+                           Удаление устойчивых пятен и сильных загрязнений со всей площади витрины.
+                       </li>
+                       <li>
+                           Очистка пространства между рамами и стеклами.
+                       </li>
+                       <li>
+                           Мытье откосов, подоконников, рам и других элементов витрины.
+                       </li>
+                       <li>
+                           Нанесение на поверхность стекла моющих растворов с их последующим снятием.
+                       </li>
+                       <li>
+                           Полировка поверхности витрина до придания ей блеска.
+                       </li>
+                   </ul>
+               </div>
             </div>
         </div>
     </section>
-    <section class="services types-cleaning">
-        <div class="services__content">
+    <section class="price">
+        <div class="price__content">
             <div class="container">
-                <div class="services__inner">
-                    <div class="types-cleaning__inner">
-                        <h2 class="services__title">
-                            Виды уборки
+                <div class="price__inner">
+                    <div class="price__info">
+                        <h2 class="price__title">
+                            Цены на ежедневную уборку офиса (7 дней в неделю)
                         </h2>
-                        <p class="types-cleaning__text">
-                            Наши клинеры приезжают в назначенное время со всем необходимым и сразу приступают к делу.
-                            Вам остаётся только оценить результат.
-                        </p>
                     </div>
-                    <div class="services__items">
-                        <a class="services__item" href="#">
-                            <div class="services__item-box">
-
-
-                                <img class="services__item-img"
-                                     src="<?php bloginfo('template_url'); ?>/assets/img/services/1.jpg"
-                                     alt="alt">
-                                <h3 class="services__subtitle">
-                                    Уборка офисов
+                </div>
+                <div class="price__slider">
+                    <div class="swiper-wrapper price__items">
+                        <div class="swiper-slide price__item">
+                            <div class="price__top">
+                                <h3 class="price__subtitle">
+                                    Площадь офиса, м²
                                 </h3>
-                                <p class="services__text">
-                                    от 40 ₽ / м2
-                                </p>
+                                <img class="price__icon" src="<?php bloginfo('template_url'); ?>/assets/img/price/1.svg" alt="alt">
                             </div>
-                            <span class="services__btn">
-                                    Перейти
-                                </span>
-                        </a>
-                        <a class="services__item" href="cleaning-commercial-premises/">
-                            <div class="services__item-box">
-
-
-                                <img class="services__item-img"
-                                     src="<?php bloginfo('template_url'); ?>/assets/img/services/2.jpg"
-                                     alt="alt">
-                                <h3 class="services__subtitle">
-                                    Уборка коммерческих помещений
+                            <ul class="price__list">
+                                <li class="price__list-item">
+                                    до 50
+                                </li>
+                                <li class="price__list-item">
+                                    50–100
+                                </li>
+                                <li class="price__list-item">
+                                    100–150
+                                </li>
+                                <li class="price__list-item">
+                                    150–200
+                                </li>
+                                <li class="price__list-item">
+                                    200–250
+                                </li>
+                                <li class="price__list-item">
+                                    250–300
+                                </li>
+                                <li class="price__list-item">
+                                    350
+                                </li>
+                                <li class="price__list-item">
+                                    400
+                                </li>
+                                <li class="price__list-item">
+                                    500
+                                </li>
+                                <li class="price__list-item">
+                                    1000
+                                </li>
+                                <li class="price__list-item">
+                                    1500
+                                </li>
+                                <li class="price__list-item">
+                                    более 1500
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide price__item price__item-middle">
+                            <div class="price__top">
+                                <h3 class="price__subtitle">
+                                    Стоимость за 1 м²
                                 </h3>
-                                <p class="services__text">
-                                    от 50 ₽ / м2
-                                </p>
+                                <img class="price__icon" src="<?php bloginfo('template_url'); ?>/assets/img/price/2.svg" alt="alt">
                             </div>
-                            <span class="services__btn">
-                                    Перейти
-                                </span>
-                        </a>
-                        <a class="services__item" href="#">
-                            <div class="services__item-box">
-
-
-                                <img class="services__item-img"
-                                     src="<?php bloginfo('template_url'); ?>/assets/img/services/3.jpg"
-                                     alt="alt">
-                                <h3 class="services__subtitle">
-                                    Уборка территорий
+                            <ul class="price__list">
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 25 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 25 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    Для вас скидка!
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide price__item price__item-right">
+                            <div class="price__top">
+                                <h3 class="price__subtitle">
+                                    Стоимость по договору в месяц
                                 </h3>
-                                <p class="services__text">
-                                    от 40 ₽ / м2
-                                </p>
+                                <img class="price__icon" src="<?php bloginfo('template_url'); ?>/assets/img/price/3.svg" alt="alt">
                             </div>
-                            <span class="services__btn">
-                                    Перейти
-                                </span>
-                        </a>
-                        <a class="services__item" href="#">
-                            <div class="services__item-box">
-                                <img class="services__item-img"
-                                     src="<?php bloginfo('template_url'); ?>/assets/img/services/4.jpg"
-                                     alt="alt">
-                                <h3 class="services__subtitle">
-                                    Мойка и химчистка
-                                </h3>
-                                <p class="services__text">
-                                    от 40 ₽ / м2
-                                </p>
-                            </div>
-                            <span class="services__btn">
-                                    Перейти
-                                </span>
-                        </a>
+                            <ul class="price__list">
+                                <li class="price__list-item">
+                                    от 9 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 13 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 16 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 18 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 25 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 28 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 32 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 37 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 42 500 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 59 500 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 69 500 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    Для вас скидка!
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="price__progressbar price-progressbar">
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="scheme-work">
+        <div class="scheme-work__content">
+            <div class="container">
+               <h2 class="scheme-work__title title">
+                   Схема работы
+               </h2>
+                <div class="scheme-work__items">
+                    <div class="scheme-work__item">
+                        <img class="scheme-work__img" src="<?php bloginfo('template_url'); ?>/assets/img/scheme-work/1.svg" alt="alt">
+                        <h3 class="scheme-work__subtitle">
+                            Вы оставляете заявку на сайте
+                        </h3>
+                        <a class="scheme-work__btn" href="#">
+                            Оставить заявку
+                        </a>
+                    </div>
+                    <div class="scheme-work__item">
+                        <img class="scheme-work__img" src="<?php bloginfo('template_url'); ?>/assets/img/scheme-work/2.svg" alt="alt">
+                        <h3 class="scheme-work__subtitle">
+                            Менеджер уточняет удобное для вас время
+                        </h3>
+                    </div>
+                    <div class="scheme-work__item">
+                        <img class="scheme-work__img" src="<?php bloginfo('template_url'); ?>/assets/img/scheme-work/3.svg" alt="alt">
+                        <h3 class="scheme-work__subtitle">
+                            Мастер приезжает и выполняет заказ
+                        </h3>
+                    </div>
+                    <div class="scheme-work__item">
+                        <img class="scheme-work__img" src="<?php bloginfo('template_url'); ?>/assets/img/scheme-work/4.svg" alt="alt">
+                        <h3 class="scheme-work__subtitle">
+                            Сдача работы и получение оплаты
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>=
     <section class="projects">
         <div class="projects__content">
             <div class="container">
@@ -703,73 +480,6 @@
                         <div class="projects__prev projects-prev-js projects-prev-css"></div>
                         <div class="projects__next projects-next-js projects-next-css"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="order">
-        <div class="order__content">
-            <div class="container order__container">
-                <div class="order__inner">
-                    <div class="order__column">
-                        <h2 class="order__title">
-                            Как сделать заказ?
-                        </h2>
-                        <p class="order__text">
-                            01
-                        </p>
-                        <a class="order__btn" href="#">
-                            Оставьте заявку
-                        </a>
-                        <p class="order__description">
-                            Менеджер свяжется с вами и согласует объём и удобное время уборки. При необходимости
-                            специалист приедет и оценит степень загрязнения на месте. Это поможет корректно подобрать
-                            моющие средства и технику.
-                        </p>
-                    </div>
-                    <ul class="order__list">
-                        <li class="order__list-item">
-                            <div class="order__list-number">
-                                01
-                            </div>
-                            <div class="order__list-box">
-                                <h3 class="order__subtitle">
-                                    Приезжаем к вам
-                                </h3>
-                                <p class="order__subtext">
-                                    Несколько клинеров приедут в назначенный день к вам в офис и распределят
-                                    обязанности.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="order__list-item">
-                            <div class="order__list-number">
-                                02
-                            </div>
-                            <div class="order__list-box">
-                                <h3 class="order__subtitle">
-                                    Выполняем уборку
-                                </h3>
-                                <p class="order__subtext">
-                                    Уборка происходит одновременно в нескольких комнатах и включает несколько этапов.
-                                    Этапы зависят от вида услуги.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="order__list-item">
-                            <div class="order__list-number">
-                                03
-                            </div>
-                            <div class="order__list-box">
-                                <h3 class="order__subtitle">
-                                    Подписываем документы
-                                </h3>
-                                <p class="order__subtext">
-                                    Предоставляем акт выполненных работ. Оплатите услуги после подписания акта.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -989,7 +699,8 @@
                                     <a class="news__link-horizontol" href="#">
                                         <div class="news__box-horizontol">
                                             <img class="news__img"
-                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/3.jpg" alt="alt">
+                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/3.jpg"
+                                                 alt="alt">
                                         </div>
                                         <h4 class="news__title-horizontol">
                                             Повысили квалификацию по дезинфекции онлайн
@@ -997,13 +708,15 @@
                                     </a>
                                 </article>
                                 <article class="news__article-horizontol">
-                                    <a class="news__link-horizontol"    href="#">
+                                    <a class="news__link-horizontol" href="#">
                                         <div class="news__box-horizontol">
                                             <img class="news__img"
-                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/4.jpg" alt="alt">
+                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/4.jpg"
+                                                 alt="alt">
                                         </div>
                                         <h4 class="news__title-horizontol">
-                                            Менеджеры нашей компании посетили семинары «Академии клининга KIEHL» в Москве
+                                            Менеджеры нашей компании посетили семинары «Академии клининга KIEHL» в
+                                            Москве
                                         </h4>
                                     </a>
                                 </article>
@@ -1011,10 +724,12 @@
                                     <a class="news__link-horizontol" href="#">
                                         <div class="news__box-horizontol">
                                             <img class="news__img"
-                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/5.jpg" alt="alt">
+                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/5.jpg"
+                                                 alt="alt">
                                         </div>
                                         <h4 class="news__title-horizontol">
-                                            Менеджеры нашей компании прошли регистрацию на выставку HYGIENALIA + PULIRE 2019
+                                            Менеджеры нашей компании прошли регистрацию на выставку HYGIENALIA + PULIRE
+                                            2019
                                         </h4>
                                     </a>
                                 </article>
@@ -1058,7 +773,8 @@
                                     <a class="news__link-horizontol" href="#">
                                         <div class="news__box-horizontol">
                                             <img class="news__img"
-                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/3.jpg" alt="alt">
+                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/3.jpg"
+                                                 alt="alt">
                                         </div>
                                         <h4 class="news__title-horizontol">
                                             Повысили квалификацию по дезинфекции онлайн
@@ -1066,13 +782,15 @@
                                     </a>
                                 </article>
                                 <article class="news__article-horizontol">
-                                    <a class="news__link-horizontol"    href="#">
+                                    <a class="news__link-horizontol" href="#">
                                         <div class="news__box-horizontol">
                                             <img class="news__img"
-                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/4.jpg" alt="alt">
+                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/4.jpg"
+                                                 alt="alt">
                                         </div>
                                         <h4 class="news__title-horizontol">
-                                            Менеджеры нашей компании посетили семинары «Академии клининга KIEHL» в Москве
+                                            Менеджеры нашей компании посетили семинары «Академии клининга KIEHL» в
+                                            Москве
                                         </h4>
                                     </a>
                                 </article>
@@ -1080,10 +798,12 @@
                                     <a class="news__link-horizontol" href="#">
                                         <div class="news__box-horizontol">
                                             <img class="news__img"
-                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/5.jpg" alt="alt">
+                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/5.jpg"
+                                                 alt="alt">
                                         </div>
                                         <h4 class="news__title-horizontol">
-                                            Менеджеры нашей компании прошли регистрацию на выставку HYGIENALIA + PULIRE 2019
+                                            Менеджеры нашей компании прошли регистрацию на выставку HYGIENALIA + PULIRE
+                                            2019
                                         </h4>
                                     </a>
                                 </article>
@@ -1127,7 +847,8 @@
                                     <a class="news__link-horizontol" href="#">
                                         <div class="news__box-horizontol">
                                             <img class="news__img"
-                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/3.jpg" alt="alt">
+                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/3.jpg"
+                                                 alt="alt">
                                         </div>
                                         <h4 class="news__title-horizontol">
                                             Повысили квалификацию по дезинфекции онлайн
@@ -1135,13 +856,15 @@
                                     </a>
                                 </article>
                                 <article class="news__article-horizontol">
-                                    <a class="news__link-horizontol"    href="#">
+                                    <a class="news__link-horizontol" href="#">
                                         <div class="news__box-horizontol">
                                             <img class="news__img"
-                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/4.jpg" alt="alt">
+                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/4.jpg"
+                                                 alt="alt">
                                         </div>
                                         <h4 class="news__title-horizontol">
-                                            Менеджеры нашей компании посетили семинары «Академии клининга KIEHL» в Москве
+                                            Менеджеры нашей компании посетили семинары «Академии клининга KIEHL» в
+                                            Москве
                                         </h4>
                                     </a>
                                 </article>
@@ -1149,10 +872,12 @@
                                     <a class="news__link-horizontol" href="#">
                                         <div class="news__box-horizontol">
                                             <img class="news__img"
-                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/5.jpg" alt="alt">
+                                                 src="<?php bloginfo('template_url'); ?>/assets/img/news/5.jpg"
+                                                 alt="alt">
                                         </div>
                                         <h4 class="news__title-horizontol">
-                                            Менеджеры нашей компании прошли регистрацию на выставку HYGIENALIA + PULIRE 2019
+                                            Менеджеры нашей компании прошли регистрацию на выставку HYGIENALIA + PULIRE
+                                            2019
                                         </h4>
                                     </a>
                                 </article>
@@ -1170,9 +895,9 @@
     <section class="services-offic">
         <div class="services-offic__content">
             <div class="container">
-               <h2 class="services-offic__title">
-                   Мы также оказываем услуги
-               </h2>
+                <h2 class="services-offic__title">
+                    Мы также оказываем услуги
+                </h2>
                 <div class="services-offic__items">
                     <a class="services-offic__item" href="#">
                         Уборка офисов
@@ -1206,6 +931,6 @@
         </div>
     </section>
 
+    <?php get_footer(); ?>
 
 
-<?php get_footer(); ?>

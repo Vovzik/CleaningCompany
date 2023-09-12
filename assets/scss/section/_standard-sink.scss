@@ -1,0 +1,115 @@
+.standard-sink {
+  &__content {
+    padding: rem(20px) 0px;
+  }
+
+  &__inner {
+    border-radius: rem(30px);
+    border: rem(2px) solid rgba(51, 133, 255, 1);
+    padding: rem(40px);
+  }
+
+  &__title {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(26px);
+    color: #000;
+    padding-bottom: rem(30px);
+    margin-bottom: rem(30px);
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      height: rem(4px);
+      width: rem(243px);
+      background: rgba(51, 133, 255, 1);
+    }
+  }
+
+  &__subtitle {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(24px);
+    color: #000;
+    margin-bottom: rem(22px);
+  }
+
+  &__list {
+    li {
+      font-family: 'GolosText', sans-serif;
+      font-weight: 400;
+      line-height: 140%;
+      font-size: rem(18px);
+      color: #000;
+      padding-left: rem(28px);
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: rem(3px);
+        left: 0px;
+        width: rem(18px);
+        height: rem(18px);
+        border-radius: 50%;
+        background: rgba(193, 218, 255, 1);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: rem(8px);
+        left: rem(5px);
+        width: rem(8px);
+        height: rem(8px);
+        border-radius: 50%;
+        background: rgba(51, 133, 255, 1);
+      }
+      &:not(:last-child) {
+        margin-bottom: rem(10px);
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(27px) 0px;
+    }
+
+    &__inner {
+      padding: rem(20px);
+      text-align: center;
+    }
+
+    &__title {
+      font-size: rem(18px);
+      padding-bottom: rem(15px);
+      margin-bottom: rem(15px);
+      &:before {
+        left: 50%;
+        height: rem(2px);
+        width: rem(243px);
+        transform: translate(-50%, 0);
+      }
+    }
+
+    &__subtitle {
+      font-size: rem(16px);
+      margin-bottom: rem(15px);
+    }
+
+    &__list {
+      li {
+        text-align: left;
+        font-size: rem(14px);
+        &:not(:last-child) {
+          margin-bottom: rem(5px);
+        }
+      }
+    }
+  }
+}
+

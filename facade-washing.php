@@ -255,7 +255,7 @@
             </div>
         </div>
     </section>
-    <section class="price price-territory">
+    <section class="price price-territory facade-price">
         <div class="price__content">
             <div class="container">
                 <div class="price__inner">
@@ -270,7 +270,7 @@
                             каждого заказа индивидуально. Позвоните нам!
                         </p>
                         <a class="price__btn button-blue" href="#">
-                            Написать менеджеру
+                            Открыть калькулятор
                         </a>
                     </div>
                 </div>

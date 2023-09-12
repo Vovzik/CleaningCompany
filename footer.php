@@ -50,122 +50,43 @@
                        <h2 class="footer__title">
                            Услуги
                        </h2>
-                       <ul class="footer__list">
-                           <li>
-                               <a href="#">
-                                   Юридические лица
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Уборка офисов
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Уборка коммерческих помещений
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Уборка территории
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Мойка и химчистка (разовые работы)
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Гардеробное обслуживание
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Дезинфекция
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Сервис сменных ковров
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Химчистка
-                               </a>
-                           </li>
-                       </ul>
+                       <h3 class="footer__subtitle">
+                           Юридические лица
+                       </h3>
+                       <?php
+                       wp_nav_menu( array(
+                           'theme_location' => 'bottom',
+                           'container' => '',
+                           'menu_class' => 'footer__list',
+                       ) );
+                       ?>
                    </div>
                    <div class="footer__item">
                        <h2 class="footer__title footer__title-opacity">
                            Услуги
                        </h2>
-                       <ul class="footer__list">
-                           <li>
-                               <a href="#">
-                                   Физические лица
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Генеральная уборка квартиры
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Поддерживающая уборка квартиры
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Мойка окон в квартире
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Генеральная уборка дома или коттеджа, танхауса
-                               </a>
-                           </li>
-                       </ul>
+                       <h3 class="footer__subtitle">
+                               Физические лица
+                       </h3>
+                       <?php
+                       wp_nav_menu( array(
+                           'theme_location' => 'bottom2',
+                           'container' => '',
+                           'menu_class' => 'footer__list',
+                       ) );
+                       ?>
                    </div>
                    <div class="footer__item">
                        <h2 class="footer__title">
                            О нас
                        </h2>
-                       <ul class="footer__list">
-                           <li>
-                               <a href="#">
-                                   Контакты
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   О компании
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Отзывы
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Часто задаваемые вопросы
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Блог
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   Вакансии
-                               </a>
-                           </li>
-                       </ul>
+                       <?php
+                       wp_nav_menu( array(
+                           'theme_location' => 'bottom3',
+                           'container' => '',
+                           'menu_class' => 'footer__list',
+                       ) );
+                       ?>
                    </div>
                </div>
                <div class="footer__socials">

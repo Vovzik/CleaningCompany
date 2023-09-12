@@ -10,12 +10,8 @@
             ">
 
             <div class="container home__container">
-                <ul class="breadcrumbs">
-                    <li><a href="#">Главная / </a></li>
-                    <li><a href="#">Главная / </a></li>
-                    <li><a href="#">Главная / </a></li>
-                    <li>Профессиональная уборка офисов</li>
-                </ul>
+                <?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(); ?>
+
                 <div class="home__inner">
                     <div class="home-office__info">
 

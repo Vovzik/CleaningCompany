@@ -1,0 +1,101 @@
+.scheme-work {
+  &__content {
+    padding: rem(50px) 0px;
+    background: rgba(243, 243, 245, 1);
+  }
+
+  &__title {
+    margin-bottom: rem(49px);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: rem(35px);
+    align-items: flex-start;
+  }
+
+  &__item {
+    border-radius: rem(10px);
+    background: #FFFFFF;
+    padding: rem(26px);
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: rem(27px);
+      right: rem(-23px);
+      width: rem(47px);
+      height: rem(16px);
+      background: url('../img/scheme-work/arrow.svg') no-repeat;
+    }
+  }
+
+  &__img {
+    margin-bottom: rem(10px);
+  }
+
+  &__subtitle {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #000;
+  }
+
+  &__btn {
+    border-radius: rem(5px);
+    border: rem(2px) solid rgba(51, 133, 255, 1);
+    padding: rem(17px) rem(31px);
+    font-family: 'GolosText', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: rgba(51, 133, 255, 1);
+    transition: 0.4s ease-out;
+    margin-top: rem(22px);
+    text-align: center;
+    &:hover {
+      background: rgba(51, 133, 255, 1);
+      color: #FFFFFF;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__btn {
+      padding: rem(10px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(60px) 0px;
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: rem(39px);
+    }
+
+    &__items {
+      grid-template-columns: 1fr;
+      grid-gap: rem(44px)
+    }
+
+    &__item {
+      text-align: center;
+      &:before {
+        right: auto;
+        top: auto;
+        left: 50%;
+        bottom: rem(-12px);
+        transform: translate(-50%, 0px) rotate(90deg);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,24 @@
+.facade-price {
+  .price__text {
+    font-size: rem(16px);
+  }
+
+  .price__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 378px;
+    &:before {
+      content: '';
+      display: block;
+      width: rem(24px);
+      height: rem(24px);
+      background: url('../img/facade-price/icon.svg') no-repeat;
+      margin-right: rem(10px);
+      transition: 0.4s ease-out;
+    }
+    &:hover:before {
+      background: url('../img/facade-price/black.svg') no-repeat;
+    }
+  }
+}

@@ -35,15 +35,6 @@
       &:not(:last-child) {
         margin-bottom: rem(9px);
       }
-       &:first-child a {
-        color: #7E8792;
-        text-decoration: underline;
-        margin-bottom: rem(10px);
-         transition: 0.4s ease-out;
-         &:hover {
-           color: #3385FF;
-         }
-      }
     }
     a {
       font-family: 'GolosText', sans-serif;
@@ -52,10 +43,23 @@
       font-size: rem(16px);
       color: #ffffff;
       transition: 0.4s ease-out;
+      &[aria-current="page"] {
+        color: #3385FF;
+      }
       &:hover {
         color: #3385FF;
       }
     }
+  }
+
+  &__subtitle {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(16px);
+    color: rgba(126, 135, 146, 1);
+    margin-bottom: rem(19px);
+    text-decoration: underline;
   }
 
 
@@ -276,6 +280,10 @@
   }
 
   @media (max-width: 480px) {
+    &__subtitle {
+      text-align: center;
+    }
+
     &__content {
       padding-top: rem(27px);
     }

@@ -102,6 +102,12 @@
     }
   }
 
+  @media (max-width: 1550px) {
+    &__content {
+      background-position: rem(900px) top;
+    }
+  }
+
   @media (max-width: 480px) {
     &__content {
       padding: rem(36px) 0px rem(27px);

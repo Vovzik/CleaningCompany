@@ -659,6 +659,56 @@ function ready() {
 
     orderSummerSnowSlider()
 
+    function fixedHeader () {
+        const header = $(".header-fixed");
+        const scrollChange = 1;
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= scrollChange) {
+                header.addClass('fixed');
+            } else {
+                header.removeClass("fixed");
+            }
+        });
+    }
+
+    fixedHeader()
+
+    function headerMenu () {
+        const itemMenu = document.querySelectorAll('.header__main-list .menu-item-has-children > a');
+
+
+        for (let i = 0; i < itemMenu.length; i++) {
+            const createItem = document.createElement('span');
+            createItem.classList.add('header__click-menu');
+            itemMenu[i].append(createItem);
+        }
+
+
+
+        const menuClick = document.querySelectorAll('.header__click-menu');
+        const subMenu = document.querySelectorAll('.sub-menu');
+
+
+
+
+        for (let i = 0; i < menuClick.length; i++) {
+                subMenu[i].classList.toggle('open')
+                itemMenu[i].classList.toggle('active')
+
+
+            menuClick[i].addEventListener('click', (e) => {
+                e.preventDefault()
+                subMenu[i].classList.toggle('open')
+                itemMenu[i].classList.toggle('active')
+            })
+        }
+
+    }
+
+    headerMenu();
+
 }
 
 

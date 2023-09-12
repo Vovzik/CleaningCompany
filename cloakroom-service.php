@@ -1,5 +1,5 @@
 <?php
-//Template Name: Этапы мойки фасадов
+//Template Name: Гардеробное обслуживание
 ?>
 
 <?php get_header(); ?>
@@ -99,6 +99,20 @@
                             деревья в порядок? Помыть пешеходные дорожки от пыли и грязи? Мы поможем вам со всеми
                             задачами быстро и качественно!
                         </p>
+                        <ul class="cleanup-company__list">
+                            <li>
+                                гостиницы;
+                            </li>
+                            <li>
+                                заведения общепита;
+                            </li>
+                            <li>
+                                медицинские учреждения;
+                            </li>
+                            <li>
+                                салоны красоты и т.п.
+                            </li>
+                        </ul>
                     </div>
                     <div class="cleanup-company__box">
                         <div class="cleanup-company__box-bg">
@@ -111,113 +125,258 @@
             </div>
         </div>
     </section>
-    <div class="statistics">
-        <div class="statistics__content">
-            <div class="container statistics__container">
-                <div class="statistics__inner">
-                    <div class="statistics__items">
-                        <div class="statistics__item">
-                            <strong class="statistics__strong">
-                                >805
-                            </strong>
-                            Уже помогли клиентам
-                        </div>
-                        <div class="statistics__item">
-                            <strong class="statistics__strong">
-                                >338
-                            </strong>
-                            Отзывов с высокой оценкой качества работы и сервиса.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <section class="work-hard">
-        <div class="work-hard__content">
+    <section class="specialists">
+        <div class="specialists__content">
             <div class="container">
-                <div class="work-hard__items">
-                    <div class="work-hard__item work-hard__item--white">
-                        <h2 class="work-hard__title">
-                            Работа даже с самыми сложными объектами
+                <div class="specialists__inner">
+                    <div class="specialists__info">
+                        <h2 class="specialists__title title">
+                            Наши специалисты приведут прилегающую территорию в порядок
                         </h2>
-                        <p class="work-hard__text">
-                            Компания CleanUp Conpany проводит мойку фасадов любой сложности, вне зависимости от состояния и труднодоступности, наличия декоративных элементов и их количества.
+                        <p>
+                            Мы берем на себя вопросы чистоты, чтобы вашим клиентам было приятно к вам возвращаться.
                         </p>
                     </div>
-                    <div class="work-hard__item">
-                        <h2 class="work-hard__title">
-                            Предоставление гарантии качества
-                        </h2>
-                        <p class="work-hard__text">
-                            Вся работа проводится исключительно профессионалами своего дела при использовании качественного проверенного оборудования и безопасных средств, вследствие чего можно не сомневаться в высоком качестве итогового результата.
-                        </p>
-                    </div>
-                    <div class="work-hard__item">
-                        <h2 class="work-hard__title">
-                            Постоянное консультирование
-                        </h2>
-                        <p class="work-hard__text">
-                            Специалисты всегда остаются на связи и при первой же необходимости оказывают помощь и содействие по всем вопросам. Возможно получение бесплатного консультирования по работе компании
-                        </p>
-                    </div>
-                    <div class="work-hard__item">
-                        <h2 class="work-hard__title">
-                            Использование исключительно безопасных средств
-                        </h2>
-                        <p class="work-hard__text">
-                            Все средства, которые используются в процессе мойки, являются импортными, и не оказывают никакого негативного влияния на материалы фасада.
-                        </p>
-                    </div>
-                    <div class="work-hard__item">
-                        <h2 class="work-hard__title">
-                            Минимальные затраты времени
-                        </h2>
-                        <p class="work-hard__text">
-                            Так как в процессе мойки используется специальное оборудование и моющие средства высокого качества – достижение максимального положительного результата будет произведено за минимально возможный промежуток времени.
-                        </p>
-                    </div>
-                    <div class="work-hard__item work-hard__item--white">
-                        <h2 class="work-hard__title">
-                            Доступная ценовая категория
-                        </h2>
-                        <p class="work-hard__text">
-                            Стоимость наших услуг установлена на доступном уровне, вследствие чего каждый сможет получить качественную мойку фасада при первой же необходимости. Нередко появляются скидки и акции, которые делают мойку еще более доступной и привлекательной.
-                        </p>
+                    <div class="specialists__items">
+                        <div class="specialists__item">
+                            <div class="specialists__box">
+                                <img class="specialists__images"
+                                     src="<?php bloginfo('template_directory'); ?>/assets/img/specialists/1.jpg"
+                                     alt="alt">
+                            </div>
+                            <div class="specialists__box-info">
+                                <h3 class="specialists__subtitle">
+                                    ПРОФЕССИОНАЛЬНОЕ ОБОРУДОВАНИЕ
+                                </h3>
+                                <p class="specialists__text">
+                                    Увлажнение дорожного покрытия, полив клумб, очистка бордюров и газонов – для этих работ требуется специальная уборочная техника. Мы сами доставим на объект все необходимое.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="specialists__item">
+                            <div class="specialists__box">
+                                <img class="specialists__images"
+                                     src="<?php bloginfo('template_directory'); ?>/assets/img/specialists/1.jpg"
+                                     alt="alt">
+                            </div>
+                            <div class="specialists__box-info">
+                                <h3 class="specialists__subtitle">
+                                    ПРОФЕССИОНАЛЬНОЕ ОБОРУДОВАНИЕ
+                                </h3>
+                                <p class="specialists__text">
+                                    Увлажнение дорожного покрытия, полив клумб, очистка бордюров и газонов – для этих работ требуется специальная уборочная техника. Мы сами доставим на объект все необходимое.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="form">
-        <div class="form__content">
+    <section class="price price-territory price-window">
+        <div class="price__content">
             <div class="container">
-                <div class="form__inner">
-                    <div class="form__info">
-                        <div class="form__text">
-                            Не хотите считать?
-                        </div>
-                        <h2 class="form__title title">
-                            Отправьте заявку или позвоните:
+                <div class="price__inner">
+                    <div class="price__info">
+                        <h2 class="price__title">
+                            Цены на ежедневную уборку офиса (7 дней в неделю)
                         </h2>
-                        <a class="form__phone" href="tel:+79999999999">
-                            +7 (999) 999-99-99
-                        </a>
                     </div>
-                    <form class="form__fields">
-                        <div class="form__fields-inner">
-                            <input class="form__input" type="text" placeholder="Имя">
-                            <input class="form__input phone" type="tel" placeholder="Телефон">
+                </div>
+                <div class="price__slider">
+                    <div class="swiper-wrapper price__items">
+                        <div class="swiper-slide price__item">
+                            <div class="price__top">
+                                <h3 class="price__subtitle">
+                                    Площадь офиса, м²
+                                </h3>
+                                <img class="price__icon" src="<?php bloginfo('template_url'); ?>/assets/img/price/1.svg"
+                                     alt="alt">
+                            </div>
+                            <ul class="price__list">
+                                <li class="price__list-item">
+                                    до 50
+                                </li>
+                                <li class="price__list-item">
+                                    50–100
+                                </li>
+                                <li class="price__list-item">
+                                    100–150
+                                </li>
+                                <li class="price__list-item">
+                                    150–200
+                                </li>
+                                <li class="price__list-item">
+                                    200–250
+                                </li>
+                                <li class="price__list-item">
+                                    250–300
+                                </li>
+                                <li class="price__list-item">
+                                    350
+                                </li>
+                                <li class="price__list-item">
+                                    400
+                                </li>
+                                <li class="price__list-item">
+                                    500
+                                </li>
+                                <li class="price__list-item">
+                                    1000
+                                </li>
+                                <li class="price__list-item">
+                                    1500
+                                </li>
+                                <li class="price__list-item">
+                                    более 1500
+                                </li>
+                            </ul>
                         </div>
-                        <input type="checkbox" class="form__checkbox-input" id="checkbox">
-                        <label for="checkbox" class="form__checkbox-title">
-                            Соглашаюсь с <a class="form__checkbox-link" href="#">политикой конфиденциальности</a>
-                        </label>
-                        <button class="form__submit button-blue" type="submit">
-                            Задать вопрос
-                        </button>
-                    </form>
+                        <div class="swiper-slide price__item price__item-middle">
+                            <div class="price__top">
+                                <h3 class="price__subtitle">
+                                    Стоимость за 1 м²
+                                </h3>
+                                <img class="price__icon" src="<?php bloginfo('template_url'); ?>/assets/img/price/2.svg"
+                                     alt="alt">
+                            </div>
+                            <ul class="price__list">
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 25 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 25 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 20 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    Для вас скидка!
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide price__item price__item-right">
+                            <div class="price__top">
+                                <h3 class="price__subtitle">
+                                    Стоимость по договору в месяц
+                                </h3>
+                                <img class="price__icon" src="<?php bloginfo('template_url'); ?>/assets/img/price/3.svg"
+                                     alt="alt">
+                            </div>
+                            <ul class="price__list">
+                                <li class="price__list-item">
+                                    от 9 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 13 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 16 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 18 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 25 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 28 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 32 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 37 000 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 42 500 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 59 500 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    от 69 500 ₽
+                                </li>
+                                <li class="price__list-item">
+                                    Для вас скидка!
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="price__progressbar price-progressbar">
+
+                    </div>
+                </div>
+                <h4 class="price-window__title">
+                    Что входит в пакет услуг «Мойка окон»:
+                </h4>
+                <div class="price-window__items">
+                    <div class="price-window__item">
+                        <ul class="price-window__list">
+                            <li class="price-window__list-item">
+                                Очистка фасада от пыли, грязи, жира;
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="price-window__item">
+                        <ul class="price-window__list">
+                            <li class="price-window__list-item">
+                                Очистка фасада от пыли, грязи, жира;
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="price-window__item">
+                        <ul class="price-window__list">
+                            <li class="price-window__list-item">
+                                Очистка фасада от пыли, грязи, жира;
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="price-window__item">
+                        <ul class="price-window__list">
+                            <li class="price-window__list-item">
+                                Очистка фасада от пыли, грязи, жира;
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="price-window__item">
+                        <ul class="price-window__list">
+                            <li class="price-window__list-item">
+                                Очистка фасада от пыли, грязи, жира;
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="price-window__item">
+                        <ul class="price-window__list">
+                            <li class="price-window__list-item">
+                                Очистка фасада от пыли, грязи, жира;
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -400,46 +559,6 @@
             </div>
         </div>
     </section>
-    <section class="window-cleanliness">
-        <div class="window-cleanliness__content">
-            <div class="container window-cleanliness__container">
-                <div class="window-cleanliness__box">
-                    <img class="window-cleanliness__bg" src="<?php bloginfo('template_url'); ?>/assets/img/cleanliness/1.jpg" alt="alt">
-                </div>
-                <div class="window-cleanliness__info">
-                    <h2 class="window-cleanliness__title title">
-                        Почему чистоту окон стоит доверить компании клинап
-                    </h2>
-                    <img class="window-cleanliness__mobail" src="<?php bloginfo('template_url'); ?>/assets/img/cleanliness/2.jpg" alt="alt">
-                    <p>
-                        Преимущества телескопической мойки перед другими методами.
-                    </p>
-                    <ul class="window-cleanliness__list">
-                        <li>
-                             <span>
-                                 1
-                             </span>
-                            Сотрудники КлинАп выезжают на объект со всем необходимым, собирают оборудование, ограничивают зону мойки;
-                        </li>
-                        <li>
-                              <span>
-                                 2
-                             </span>
-                            Клинер с земли с помощью специальной телескопической щетки удаляет с наружной поверхности стекол пыль, копоть, птичий помет и другие загрязнения;
-                        </li>
-                        <li>
-                             <span>
-                                 3
-                             </span>
-                            При необходимости проводится повторная обработка сильно загрязненных участков.
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <section class="reviews">
         <div class="reviews__content">
             <div class="container">
