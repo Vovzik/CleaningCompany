@@ -112,6 +112,38 @@ function ready() {
 
     tabs();
 
+    function tabs2() {
+        document.querySelectorAll('.tabs-items2').forEach((element) => {
+            const tabsItem = element.querySelectorAll('.tabs-item2');
+            const tabsBody = element.querySelectorAll('.tabs-body2');
+
+
+            for (let i = 0; i < tabsItem.length; i++) {
+                if (tabsItem[i]) {
+                    tabsItem[i].addEventListener('click', () => {
+                        tabsItem.forEach((element) => {
+                            element.classList.remove('active');
+                        })
+
+                        tabsItem[i].classList.add('active');
+
+                        tabsBody.forEach((element) => {
+                            element.classList.remove('open');
+                        })
+
+                        tabsBody[i].classList.add('open');
+                    })
+                }
+            }
+
+
+
+
+        })
+    }
+
+    tabs2();
+
     function projectsSlider() {
         new Swiper('.projects-slider-js', {
             slidesPerView: 2,
@@ -708,6 +740,260 @@ function ready() {
     }
 
     headerMenu();
+
+    function calculator() {
+
+
+        function moreBtn () {
+            const calculatorMoreJs = document.querySelector('.calculator-more-js');
+            const calculatorOpenJs = document.querySelector('.calculator-open-js');
+            if(calculatorMoreJs) {
+                calculatorMoreJs.addEventListener('click', () => {
+                    calculatorOpenJs.classList.toggle('open');
+                    calculatorMoreJs.classList.toggle('active');
+
+                    if(calculatorMoreJs.innerHTML === 'Скрыть') {
+                        calculatorMoreJs.innerHTML = 'Показать полный список';
+                    } else {
+                        calculatorMoreJs.innerHTML = 'Скрыть';
+                    }
+                })
+            }
+        }
+        moreBtn();
+
+        function openForm() {
+          const calculatorBtnMoreJs = document.querySelector('.calculator-btn-more-js');
+          const calculatorBoxFormJs = document.querySelector('.calculator-box-form-js');
+
+
+            calculatorBtnMoreJs.addEventListener('click', (e) => {
+                e.preventDefault();
+                calculatorBoxFormJs.classList.add('open');
+                calculatorBtnMoreJs.style.display = 'none';
+            })
+        }
+
+        openForm();
+
+        function plusMinusValue() {
+            const js__calculatorMinus = document.querySelectorAll('.js-calculator-minus');
+            const js__calculatorValue = document.querySelectorAll('.js-calculator-value');
+            const js__calculatorPlus = document.querySelectorAll('.js-calculator-plus');
+            const calculatorOutputJs = document.querySelector('.calculator-output-js');
+            const calculatorNameJs = document.querySelectorAll('.calculator-name-js');
+            const calculatorPriceJs = document.querySelectorAll('.calculator-price-js');
+            const calculatorOpenChildJs = document.querySelector('.calculator-opendchild-js');
+            calculatorOutputJs.innerHTML = 0 + '₽';
+            const parameters = {
+                name: null,
+                number: null,
+                price: null,
+            }
+            let arr1 = [];
+            let result = 0;
+
+            let summa = null;
+
+            let prices = [];
+
+
+
+            function addNameCountPrice (i) {
+                let summaTotal = parameters.price * parameters.number
+
+                const div = document.createElement('div');
+                div.classList.add('calculator__open-child');
+                div.dataset.number = i;
+                parseInt(parameters.number) === 1 ? calculatorOpenChildJs.append(div) : false;
+
+
+                const number = document.querySelector(`[data-number="${i}"]`);
+
+
+
+                const span = document.createElement('span');
+                const strong = document.createElement('strong');
+                const close = document.createElement('div');
+                close.classList.add('calculator__close');
+                close.innerHTML = 'x';
+                span.classList.add('calculator__name');
+                strong.classList.add('calculator__number');
+                parseInt(parameters.number) === 1 ? number.append(span, strong, close) : false;
+                const calculatorName = document.querySelector(`[data-number="${i}"] .calculator__name`);
+                const calculatorNumber = document.querySelector(`[data-number="${i}"] .calculator__number`);
+                const calculatorClose = document.querySelector(`[data-number="${i}"] .calculator__close`)
+
+
+
+
+                if(calculatorName) {
+                    calculatorName.innerHTML = parameters.name + 'x ' + parameters.number;
+                    calculatorNumber.innerHTML = summaTotal + ' руб.';
+                    calculatorClose.dataset.price = summaTotal
+                }
+
+
+
+
+
+
+
+
+            }
+
+            function removeNameCountPrice (i)  {
+                let summaTotal = parameters.price * parameters.number
+
+                console.log(parameters.price)
+
+
+                const calculatorName = document.querySelector(`[data-number="${i}"] .calculator__name`);
+                const calculatorNumber = document.querySelector(`[data-number="${i}"] .calculator__number`);
+
+
+
+
+
+                if(calculatorName) {
+                    calculatorName.innerHTML = parameters.name + 'x ' + parameters.number;
+                    calculatorNumber.innerHTML = summaTotal + ' руб.';
+                }
+
+                if(parseInt(parameters.number) === 0) {
+                    const index = document.querySelector(`[data-number="${i}"]`)
+                    calculatorOpenChildJs.removeChild(index)
+                }
+            }
+            function sum (x) {
+                let s = 0;
+
+                for (let i = 0; i < x.length; i++) {
+                    s += x[i];
+                }
+
+                return s
+            }
+            function totalSummaAdd (i) {
+                arr1.push(parseInt(calculatorPriceJs[i].innerHTML));
+                result = sum(arr1);
+                let total = result
+                calculatorOutputJs.innerHTML = total + '₽' ;
+            }
+
+            function totalSummaRemove () {
+                let index = arr1.indexOf(parseInt(parameters.price));
+                arr1.splice(index, 1);
+                result = sum(arr1);
+                calculatorOutputJs.innerHTML = result + '₽';
+
+            }
+
+            function closeNumber (i) {
+
+                const calculatorClose = document.querySelectorAll(`.calculator__close`);
+                const calculatorOpenChild = document.querySelectorAll(`.calculator__open-child`);
+
+
+
+
+
+
+                for (let j = 0; j < calculatorClose.length; j++) {
+                    calculatorClose[j].addEventListener('click', () => {
+                        arr1.pop()
+                        js__calculatorValue[i].value = 0;
+                        calculatorOpenChild[j].remove();
+
+                        let summa = parseInt(calculatorPriceJs[i].innerHTML);
+                         prices.push(summa);
+                         let index = prices.indexOf(summa);
+                         let elementDelete = prices.splice(index, 1)
+                         let result = prices;
+
+
+                        calculatorOutputJs.innerHTML = result + '₽' ;
+
+
+
+                    })
+                }
+
+
+
+            }
+
+            function parametersLIst (i) {
+
+                parameters.name = calculatorNameJs[i].innerHTML
+                parameters.number =  js__calculatorValue[i].value;
+                parameters.price = calculatorPriceJs[i].innerHTML
+            }
+
+
+            for (let i = 0; i < js__calculatorPlus.length; i++) {
+                js__calculatorPlus[i].addEventListener('click', () => {
+                    js__calculatorValue[i].value++;
+                    if (js__calculatorValue[i].value > 0) {
+                        js__calculatorMinus[i].classList.add('minus-blue')
+                    }
+
+
+
+                    parametersLIst(i)
+                    addNameCountPrice(i);
+                    totalSummaAdd(i);
+
+                    closeNumber(i)
+
+
+
+
+
+
+
+
+                })
+
+                js__calculatorMinus[i].addEventListener('click', () => {
+                    if (js__calculatorValue[i].value > 0) {
+                        js__calculatorValue[i].value--;
+                    }
+                    if(js__calculatorValue[i].value < 1) {
+                        js__calculatorMinus[i].classList.remove('minus-blue')
+                    }
+
+                    parametersLIst(i);
+                    totalSummaRemove();
+                    removeNameCountPrice(i);
+                })
+
+                js__calculatorValue[i].addEventListener('input', () => {
+                    if (js__calculatorValue[i].value > 0) {
+                        js__calculatorMinus[i].classList.add('minus-blue')
+                    }
+
+                    if(js__calculatorValue[i].value < 1) {
+                        js__calculatorMinus[i].classList.remove('minus-blue')
+                    }
+
+                })
+
+
+
+
+            }
+        }
+
+        plusMinusValue();
+
+
+
+
+
+    }
+
+    calculator();
 
 }
 
