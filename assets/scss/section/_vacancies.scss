@@ -1,0 +1,351 @@
+.vacancies {
+  &__content {
+    padding: rem(185px) 0px rem(57px);
+  }
+
+  &__title {
+    margin-bottom: rem(36px);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__tabs {
+    width: rem(674px);
+    margin-right: rem(30px);
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: rem(5px);
+    margin-bottom: rem(54px);
+  }
+
+  &__item {
+    border: rem(2px) solid #3385FF;
+    border-radius: rem(5px);
+    padding: rem(12px) rem(26px);
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #3385FF;
+    transition: 0.4s ease-out;
+    cursor: pointer;
+    &.active {
+      background: #3385FF;
+      color: #FFFFFF;
+    }
+  }
+
+  &__open {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: rem(20px);
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-out;
+    &.open {
+      opacity: 1;
+      height: auto;
+      overflow: visible;
+    }
+  }
+
+  &__box {
+    background: #F3F3F5;
+    border-radius: rem(30px);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: rem(20px);
+  }
+
+  &__subtitle {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    font-size: rem(24px);
+    color: #000000;
+    text-align: center;
+    margin-bottom: rem(15px);
+  }
+
+  &__price {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #000000;
+    text-align: center;
+    margin-bottom: rem(15px);
+  }
+
+  &__experience {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(14px);
+    color: #000000;
+    text-align: center;
+    margin-bottom: rem(10px);
+  }
+
+  &__grafic {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(14px);
+    color: #000000;
+    text-align: center;
+    margin-bottom: rem(10px);
+  }
+
+  &__list {
+    margin-bottom: rem(10px);
+  }
+
+  &__list-item {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(14px);
+    color: #000000;
+    position: relative;
+    &:not(:first-child) {
+      padding-left: rem(10px);
+      &:before {
+        content: '';
+        width: rem(3px);
+        height: rem(3px);
+        background: #000000;
+        border-radius: 50%;
+        position: absolute;
+        top: rem(9px);
+        left: 0px;
+      }
+    }
+  }
+
+  &__btn {
+    width: rem(100px);
+    display: block;
+    margin: 0 auto;
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #000000;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__form {
+    width: rem(495px);
+  }
+
+  &__form-title {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    font-size: rem(24px);
+    color: #000000;
+    margin-bottom: rem(15px);
+  }
+
+  &__input {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(16px);
+    color: #000000;
+    margin-bottom: rem(15px);
+    border: rem(1px) solid #C8C8C8;
+    border-radius: rem(5px);
+    padding-left: rem(17px);
+    height: rem(58px);
+    background: #F3F3F5;
+    transition: 0.4s ease-out;
+    &::placeholder {
+      color: #9C9C9C;
+    }
+    &:focus {
+      background: #FFFFFF;
+      border-color: #3385FF;
+    }
+  }
+
+  &__button {
+    border-radius: rem(5px);
+    background: #3385FF;
+    padding: rem(12px) rem(26px);
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #FFFFFF;
+    margin-bottom: rem(15px);
+    transition: 0.4s ease-out;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__checkbox input {
+    display: none;
+  }
+
+  .wpcf7-list-item-label {
+    cursor: pointer;
+    position: relative;
+    padding-left: rem(29px);
+    display: flex;
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(16px);
+    color: #000000;
+    max-width: rem(362px);
+  }
+
+
+  .wpcf7-list-item-label:before {
+    content: "";
+    display: block;
+    width: rem(20px);
+    height: rem(20px);
+    border: rem(1px) solid #000000;
+    background-color: #ffffff;
+    border-radius: rem(5px);
+    position: absolute;
+    top: 0px;
+    left:0px;
+  }
+
+  .wpcf7-list-item-label::after {
+    content: "";
+    display: block;
+    width: rem(10px);
+    height: rem(10px);
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .1s linear;
+    background: url('../img/vacancies/check.svg') no-repeat;
+    background-size: rem(10px) rem(10px);
+  }
+
+  &__checkbox input:checked + .wpcf7-list-item-label:after {
+    opacity: 1;
+  }
+
+  .wpcf7-list-item {
+    margin: 0px;
+  }
+
+  .wpcf7-response-output {
+    text-align: center;
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(14px);
+    color: #000000;
+  }
+
+  @media (max-width: 991px) {
+    &__inner {
+      flex-direction: column;
+    }
+    &__tabs {
+      width: 100%;
+      margin: 0px;
+      margin-bottom: rem(32px);
+    }
+
+    &__form {
+      width: 100%;
+      text-align: center;
+      .wpcf7-spinner {
+        display: none;
+      }
+    }
+
+    &__form-title {
+      text-align: center;
+    }
+
+    &__input {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__button {
+      display: block;
+      margin: 0 auto;
+    }
+
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(133px) 0px rem(42px);
+    }
+    &__title {
+      text-align: center;
+      margin-bottom: rem(21px);
+    }
+
+    &__items {
+      margin-bottom: rem(28px);
+    }
+
+    &__item {
+      font-size: rem(14px);
+    }
+
+    &__open {
+      grid-template-columns: 1fr;
+      grid-gap: rem(10px);
+    }
+
+    &__subtitle {
+      font-size: rem(20px);
+    }
+
+    &__price {
+      font-size: rem(16px);
+    }
+
+    &__experience {
+      font-size: rem(12px);
+      margin-bottom: rem(5px);
+    }
+
+    &__grafic,
+    &__list-item {
+      font-size: rem(12px);
+    }
+
+    &__form-title {
+      font-size: rem(20px);
+    }
+
+    &__input {
+      margin-bottom: rem(10px);
+    }
+
+    .wpcf7-list-item-label {
+      text-align: left;
+      font-size: rem(12px);
+    }
+  }
+}
+

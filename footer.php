@@ -150,7 +150,53 @@
 </footer>
 
 <?php  wp_footer() ?>
+
+<div data-popup="#popup" class="popup js__popup-open">
+    <div class="popup__body">
+        <div class="popup__content js__popup-content">
+           <h3 class="popup__title">
+               Менеджер по клинингу
+           </h3>
+            <div class="popup__redactor">
+                <p>
+                    Менеджер по клинингу на объекте — контактное звено в цепи Заказчик-Исполнитель. Мы ищем ответственного, неконфликтного работника, который обладает навыками делового общения.
+                </p>
+                <h4>
+                    Наши требования:
+                </h4>
+                <ul>
+                    <li>наличие высшего либо среднего-специального образования;</li>
+                    <li>навыки работы с ПК;</li>
+                    <li>грамотная речь, навыки делового общения;</li>
+                    <li>опрятный внешний;</li>
+                    <li>опыт работы в сфере клининговых услуг и менеджменте.</li>
+                </ul>
+                <h4>
+                    График работы 5/2 , рабочий день не нормирован.
+                </h4>
+            </div>
+        </div>
+    </div>
 </div>
+</div>
+
+<div data-popup="#popup-form" class="vacancies popup-form js__popup-open">
+    <div class="popup-form__body">
+        <div class="popup-form__content js__popup-content">
+            <h3 class="popup-form__title">
+                Заказать обратный звонок
+            </h3>
+            <p class="popup-form__text">
+                Наш менеджер свяжется с вами в течение 30 минут.
+            </p>
+            <?php echo do_shortcode('[contact-form-7 id="4a9e8fb" title="Контактная форма 2"]'); ?>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
 
 
 

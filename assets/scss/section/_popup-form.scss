@@ -1,0 +1,91 @@
+.popup-form {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.4s ease;
+  z-index: 1000;
+  overflow: auto;
+  cursor: pointer;
+
+  &.js__popup-open {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.js__popup-open.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  &__body {
+    min-height: 100%;
+    padding: 30px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &__content {
+    background-color: rgb(255, 255, 255);
+    cursor: default;
+    width: rem(695px);
+    border-radius: rem(30px);
+    padding: rem(32px) rem(100px);
+    position: relative;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    font-size: rem(32px);
+    color: #000;
+    text-align: center;
+    margin-bottom: rem(10px);
+  }
+
+   &__text {
+     font-family: 'GolosText', sans-serif;
+     font-weight: 400;
+     line-height: 140%;
+     font-size: rem(18px);
+     color: #7E8792;
+     text-align: center;
+     margin-bottom: rem(20px);
+   }
+
+  .vacancies__input {
+    width: 100%;
+    padding: 0px rem(10px);
+  }
+
+  .vacancies__button {
+     margin: 0 auto;
+    display: block;
+  }
+
+  .wpcf7-spinner {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    &__content {
+      padding: rem(20px);
+    }
+
+    &__title {
+      font-size: rem(24px);
+    }
+
+    &__text {
+      font-size: rem(14px);
+    }
+  }
+}

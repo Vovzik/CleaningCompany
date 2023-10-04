@@ -5,3 +5,10 @@
   font-size: rem(18px);
   color: #000;
 }
+
+.main-top {
+  padding-top: rem(150px);
+  @media (max-width: 480px) {
+    padding-top: rem(110px);
+  }
+}

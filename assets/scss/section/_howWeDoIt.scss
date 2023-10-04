@@ -1,0 +1,131 @@
+.howWeDoIt {
+  &__content {
+    padding: rem(60px) 0px;
+  }
+
+  &__title {
+    margin-bottom: rem(50px);
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__items {
+    width: rem(200px);
+    margin-right: rem(46px);
+  }
+
+  &__item {
+    cursor: pointer;
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(24px);
+    color: #000;
+    transition: 0.4s ease-out;
+    position: relative;
+    padding-left: rem(76px);
+    &:not(:last-child) {
+      margin-bottom: rem(30px);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: rem(15px);
+      left: 0px;
+      width: rem(61px);
+      height: rem(5px);
+      border-radius: rem(2.5px);
+      background: rgba(51, 133, 255, 1);
+      transition: 0.4s ease-out;
+      opacity: 0;
+    }
+    &.active {
+      color: rgba(51, 133, 255, 1);
+    }
+    &.active:before {
+      opacity: 1;
+    }
+    &
+    &:not(:last-child) {
+      margin-bottom: rem(30px);
+    }
+  }
+
+  &__box {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-out;
+    &.open {
+      opacity: 1;
+      height: auto;
+      overflow: visible;
+    }
+  }
+
+  &__column {
+    width: rem(1054px);
+  }
+
+  &__img {
+  }
+
+  @media (max-width: 991px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__items {
+      width: 100%;
+      margin: 0px auto;
+      margin-bottom: rem(38px);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: rem(27px) rem(72px)
+    }
+
+    &__column {
+      width: 100%;
+    }
+
+
+    &__item {
+      padding: 0px;
+      text-align: center;
+      &:not(:last-child) {
+        margin: 0px;
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__box {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(30px) 0px;
+    }
+
+    &__item {
+      font-size: rem(18px);
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: rem(31px);
+    }
+
+    &__box {
+      text-align: center;
+    }
+  }
+}
+

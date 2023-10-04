@@ -1,0 +1,59 @@
+.cases {
+  &__title {
+    margin-bottom: rem(45px);
+  }
+
+   &__items {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: rem(20px);
+     margin-bottom: rem(20px);
+   }
+
+  &__btn {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #000;
+    margin: 0 auto;
+    display: block;
+    width: rem(164px);
+    transition: 0.4s ease-out;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .cases-hidden-js {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.4s ease-out;
+    padding: rem(0px);
+    &.open {
+      height: auto;
+      overflow: visible;
+      opacity: 1;
+      padding: rem(25px);
+      margin-bottom: rem(20px);
+    }
+  }
+
+  @media (max-width: 767px) {
+   &__items {
+     display: block;
+   }
+
+    .projects__swiper-slide {
+        margin-bottom: rem(20px);
+    }
+
+    .cases-hidden-js {
+      margin: rem(0px);
+    }
+  }
+}

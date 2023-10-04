@@ -1,0 +1,140 @@
+.contacts {
+
+  &__title {
+    margin-bottom: rem(45px);
+  }
+
+  &__inner {
+    padding: rem(86px) 0px;
+    position: relative;
+  }
+
+  &__box {
+    width: rem(454px);
+    border-radius: rem(30px);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px rem(4px) rem(4px) 0px rgba(0, 0, 0, 0.25);
+    padding: rem(57px) rem(40px);
+    position: relative;
+    z-index: 1;
+  }
+
+  &__subtitle {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    font-size: rem(24px);
+    color: #000;
+    margin-bottom: rem(25px);
+  }
+
+  &__address {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(18px);
+    color: #000;
+    position: relative;
+    padding-left: rem(43px);
+    max-width: rem(324px);
+    &:not(:last-child) {
+      margin-bottom: rem(10px);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: rem(24px);
+      height: rem(24px);
+      background: url('../img/contacts/location.svg') no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+
+  &__address-ofic {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(14px);
+    color: #7E8792;
+    margin-top: rem(3px);
+    display: block;
+  }
+
+  &__address--phone:before {
+    background: url('../img/contacts/phone.svg') no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__address-phone {
+    font-family: 'GolosText', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: rem(14px);
+    color: #3385FF;
+    margin-top: rem(3px);
+    text-decoration: underline;
+    transition: 0.4s ease-out;
+    display: block;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__address--mail:before {
+    background: url('../img/contacts/mail.svg') no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__map {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 991px) {
+    &__map {
+      position: static;
+      height: rem(400px);
+    }
+
+    &__inner {
+      padding: 0px;
+      padding-bottom: rem(30px);
+    }
+
+    &__box {
+      width: 100%;
+      margin-bottom: rem(20px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__box {
+      padding: rem(20px);
+      border-radius: rem(15px);
+    }
+
+    &__map {
+      height: rem(300px);
+    }
+
+    &__title {
+      margin-bottom: rem(30px);
+    }
+
+    &__subtitle {
+      font-size: rem(20px);
+    }
+
+    &__address {
+      font-size: rem(14px);
+      padding-left: rem(34px);
+    }
+  }
+}
+

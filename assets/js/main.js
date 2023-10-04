@@ -174,9 +174,10 @@ function ready() {
         const projectsReadMoreJs = document.querySelectorAll('.projects-read-more-js');
 
 
+
         for (let i = 0; i < projectsReadMoreJs.length; i++) {
             if (projectsReadMoreJs[i]) {
-                projectsReadMoreJs[i].addEventListener('click', () => {
+                projectsReadMoreJs[i].addEventListener('click', (e) => {
                     projectsListJs[i].classList.toggle('open');
 
                     if(projectsReadMoreJs[i].innerHTML === 'Скрыть')  {
@@ -190,6 +191,31 @@ function ready() {
     }
 
     readMore();
+
+    function readMore2 () {
+        const casesReadMoreJs = document.querySelectorAll('.cases-read-more-js');
+        const casesHiddenJs = document.querySelectorAll('.cases-hidden-js');
+
+
+
+        for (let i = 0; i < casesReadMoreJs.length; i++) {
+            if (casesReadMoreJs[i]) {
+                casesReadMoreJs[i].addEventListener('click', (e) => {
+                    casesHiddenJs.forEach((element) => {
+                        element.classList.toggle('open');
+                    })
+
+                    if(casesReadMoreJs[i].innerHTML === 'Скрыть')  {
+                        casesReadMoreJs[i].innerHTML = 'Открыть больше...'
+                    } else {
+                        casesReadMoreJs[i].innerHTML = 'Скрыть';
+                    }
+                })
+            }
+        }
+    }
+
+    readMore2();
 
 
     function reviewsSlider() {
@@ -311,6 +337,62 @@ function ready() {
     }
 
     map();
+
+    function map2 () {
+       const map = document.querySelector('.map-js2');
+       const jsAddress = document.querySelector('.js-address');
+
+
+
+       if(map) {
+           ymaps.ready(init);
+       }
+
+       function init() {
+       let myMap = new ymaps.Map(map, {
+           center: [59.94, 30.31],
+           zoom: 10,
+       })
+           if(jsAddress) {
+               const coords = jsAddress.dataset.longitude;
+               const coords2 = jsAddress.dataset.latitude;
+               const placemark = new ymaps.Placemark([coords, coords2]);
+               let longitude;
+               let latitude;
+               myMap.geoObjects.add(placemark);
+               $('.contacts-label-js').each(function() {
+                   var self = $(this);
+                   self.bind({
+                       click: function(e) {
+                           longitude = self.parents('.js-address').attr('data-longitude');
+                           latitude = self.parents('.js-address').attr('data-latitude');
+                           placemark.geometry.setCoordinates([longitude, latitude]);
+                           myMap.setCenter(placemark.geometry.getCoordinates());
+                       }
+                   })
+               });
+           }
+
+
+
+
+
+
+
+           myMap.controls.remove('geolocationControl'); // удаляем геолокацию
+           myMap.controls.remove('searchControl'); // удаляем поиск
+           myMap.controls.remove('trafficControl'); // удаляем контроль трафика
+           myMap.controls.remove('typeSelector'); // удаляем тип
+           myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+           myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
+           myMap.controls.remove('rulerControl'); // удаляем контрол правил
+           myMap.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+       }
+
+    }
+
+    map2();
 
 
 
@@ -766,12 +848,14 @@ function ready() {
           const calculatorBtnMoreJs = document.querySelector('.calculator-btn-more-js');
           const calculatorBoxFormJs = document.querySelector('.calculator-box-form-js');
 
-
+        if(calculatorBtnMoreJs) {
             calculatorBtnMoreJs.addEventListener('click', (e) => {
                 e.preventDefault();
                 calculatorBoxFormJs.classList.add('open');
                 calculatorBtnMoreJs.style.display = 'none';
             })
+        }
+
         }
 
         openForm();
@@ -784,7 +868,10 @@ function ready() {
             const calculatorNameJs = document.querySelectorAll('.calculator-name-js');
             const calculatorPriceJs = document.querySelectorAll('.calculator-price-js');
             const calculatorOpenChildJs = document.querySelector('.calculator-opendchild-js');
-            calculatorOutputJs.innerHTML = 0 + '₽';
+            if(calculatorOutputJs) {
+                calculatorOutputJs.innerHTML = 0 + '₽';
+            }
+
             const parameters = {
                 name: null,
                 number: null,
@@ -994,6 +1081,105 @@ function ready() {
     }
 
     calculator();
+
+
+
+    function checkboxForm() {
+        const input = document.querySelector('.vacancies__checkbox input');
+
+        if(input) {
+            input.setAttribute('checked', 'true');
+        }
+    }
+
+    checkboxForm()
+
+    function popup() {
+        const js__popupLink = document.querySelectorAll('.js__popup-link');
+        const js__popupClose = document.querySelectorAll('.js__popup-close');
+        const body = document.querySelector('body');
+
+
+        let unlock = true;
+
+        const timeout = 400;
+
+
+
+
+        for (let i = 0; i < js__popupLink.length; i++) {
+            js__popupLink[i].addEventListener('click', (event) => {
+                const popup__name = js__popupLink[i].dataset.modal;
+                const popupCurent = document.querySelector(`[data-popup="${popup__name}"]`);
+                popupOpen(popupCurent);
+                event.preventDefault();
+            });
+        };
+
+
+        for (let i = 0; i < js__popupClose.length; i++) {
+            js__popupClose[i].addEventListener('click', (event) => {
+                popupClose(js__popupClose[i].closest('.js__popup-open'));
+                event.preventDefault();
+            });
+        };
+
+
+
+        function popupOpen(popupCurent) {
+            if (popupCurent && unlock) {
+                const popupActive = document.querySelector('.js__popup-open.open');
+
+                if (popupActive) {
+                    popupClose(popupActive, false);
+                } else {
+                    bodylock();
+                }
+
+
+                popupCurent.classList.add('open');
+                popupCurent.addEventListener('click', (event) => {
+                    if (!event.target.closest('.js__popup-content')) {
+                        popupClose(event.target.closest('.js__popup-open'));
+                        console.log(true);
+                    } else {
+                        console.log(false);
+                    }
+                });
+            };
+        }
+
+
+        function popupClose(popupActive, doUnlock = true) {
+            if (unlock) {
+                popupActive.classList.remove('open');
+
+                if (doUnlock) {
+                    bodyUnlock();
+                };
+            };
+        };
+
+
+        function bodylock() {
+            const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px'; //Получили ширину scrolla
+
+            body.style.paddingRight = lockPaddingValue;
+            body.classList.add('lock');
+
+        };
+
+
+        function bodyUnlock() {
+            setTimeout(function () {
+                body.style.paddingRight = '0px';
+                body.classList.remove('lock');
+            }, timeout)
+        };
+    }
+
+    popup();
+
 
 }
 

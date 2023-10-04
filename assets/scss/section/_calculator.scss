@@ -58,7 +58,7 @@
 
   &__title {
     font-family: 'GolosText', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 140%;
     font-size: rem(18px);
     color: rgba(116, 116, 116, 1);
@@ -549,6 +549,117 @@
     line-height: 140%;
     font-size: rem(16px);
     color: #000;
+  }
+
+  @media (max-width: 1199px) {
+    &__box-form {
+      max-width: none;
+    }
+
+    &__box-column {
+      width: rem(200px);
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__column {
+      width: 100%;
+      margin: 0px;
+      margin-bottom: rem(22px);
+    }
+
+    &__box {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__content {
+      padding: rem(30px) 0px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0px;
+      border: 0px;
+      margin-bottom: rem(18px);
+    }
+
+    &__subtitle {
+      font-size: rem(17px);
+      margin-bottom: rem(14px);
+    }
+
+    &__subtitle-icon {
+      width: rem(14px);
+    }
+
+    &__subtitle-info {
+      margin-left: rem(6px);
+    }
+
+    &__open-item {
+      font-size: rem(14px);
+      padding: rem(16px) rem(17px);
+    }
+
+    &__open-items {
+      grid-gap: rem(5px);
+      margin-bottom: rem(43px);
+    }
+
+    &__open-text {
+      font-size: rem(14px);
+    }
+
+    &__info {
+      margin-left: rem(8px);
+    }
+
+    &__info-price {
+      font-size: rem(14px);
+    }
+
+    &__open-body.open {
+      margin-bottom: rem(32px);
+    }
+
+    &__block-column,
+    &__block-column2,
+    &__box-subtitle,
+    &__number {
+      font-size: rem(14px);
+    }
+    &__box {
+      padding: rem(20px);
+    }
+
+    &__box-title {
+      font-size: rem(18px);
+      margin-bottom: rem(13px);
+    }
+    &__output {
+      font-size: rem(20px);
+    }
+    &__btn {
+      min-width: 100%;
+      height: rem(46px);
+    }
+
+    &__info-before,
+    &__subtitle-before {
+      transform: translate(0, 0);
+      left: rem(-51px);
+    }
+    &__info-before:after,
+    &__subtitle-before:after {
+      transform: translate(0, 0);
+      left: rem(55px);
+    }
   }
 }
 
