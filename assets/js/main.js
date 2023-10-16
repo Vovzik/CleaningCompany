@@ -258,7 +258,7 @@ function ready() {
             slidesPerView: 1,
             spaceBetween: 65,
             speed: 1000,
-            loop: true,
+            loop: false,
             // Navigation arrows
             navigation: {
                 nextEl: '.news__next',
@@ -1179,6 +1179,8 @@ function ready() {
     }
 
     popup();
+
+
 
 
 }

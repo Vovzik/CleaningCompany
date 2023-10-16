@@ -13,7 +13,13 @@ function my_wp_head_js() {
     wp_enqueue_script( 'mask', get_stylesheet_directory_uri() .'/assets/js/libs/mask.js', array(), null, true );
     wp_enqueue_script( 'nouislider', get_stylesheet_directory_uri() .'/assets/js/libs/nouislider.min.js', array(), null, true );
     wp_enqueue_script( 'main', get_stylesheet_directory_uri() .'/assets/js/main.js', array(), null, true );
+    wp_enqueue_script( 'my-ajax', get_stylesheet_directory_uri() . '/assets/js/custom.js', array(), null, true );
+
 }
+
+
+
+
 
 
 
@@ -27,6 +33,11 @@ register_nav_menus(array(
     'bottom3'    => 'подвал меню 3',    //Название месторасположения меню в шаблоне
     'top4'    => 'шапка меню',    //Название месторасположения меню в шаблоне
 ));
+
+function the_truncated_post($symbol_amount) {
+    $filtered = strip_tags( preg_replace('@<style[^>]*?>.*?</style>@si', '', preg_replace('@<script[^>]*?>.*?</script>@si', '', apply_filters('the_content', get_the_content()))) );
+    echo substr($filtered, 0, strrpos(substr($filtered, 0, $symbol_amount), ' ')) . '...';
+}
 
 
 // свой класс построения меню:
@@ -123,6 +134,20 @@ function my_nav_menu( $args ) {
 
     echo wp_nav_menu( $args );
 }
+
+add_action( 'wp_enqueue_scripts', 'action_function_name_7714' );
+
+function action_function_name_7714(){
+
+    wp_localize_script( 'my-ajax', 'MyAjax', [
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        'test' => 'хуй'
+        ]
+    );
+
+}
+
+
 
 
 

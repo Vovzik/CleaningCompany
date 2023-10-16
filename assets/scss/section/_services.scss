@@ -95,6 +95,12 @@
     background-position: top right;
   }
 
+  &__item:last-child &__item-img {
+    display: none;
+  }
+
+
+
   &__item:hover &__item-img {
     transform: scale(1.1);
   }

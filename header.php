@@ -17,7 +17,7 @@
                 <div class="header__inner">
                     <a class="header__logo" href="/">
                         <img class="header__logo-img"
-                             src="<?php bloginfo('template_directory'); ?>/assets/img/header/logo.jpg" alt="Logo">
+                             src="<?php the_field('header__logo', 10) ?>" alt="Logo">
                     </a>
                     <div class="header__burger-box">
                         <div class='header__burger js__header-burgerclick'>
@@ -28,29 +28,19 @@
                     </div>
 
                     <div class="header__cities header__cities-click-js">
-                        Санкт-Петербург
+                        <?php the_field('header__cities', 10) ?>
                         <ul class="header__cities-list header__cities-open-js">
-                            <li class="header__cities-item">
-                                <a class="header__cities-link" href="#">
-                                    Йошкар-ола
-                                </a>
-                            </li>
-                            <li class="header__cities-item">
-                                <a class="header__cities-link" href="#">
-                                    Санчурск
-                                </a>
-                            </li>
-                            <li class="header__cities-item">
-                                <a class="header__cities-link" href="#">
-                                    Санчурск
-                                </a>
-                            </li>
-                            <li class="header__cities-item">
-                                <a class="header__cities-link" href="#">
-                                    Санчурск
-                                </a>
-                            </li>
+                            <?php $repeater = get_field('header__cities-list', 10); ?>
 
+                            <?php if ($repeater) : ?>
+                                <?php foreach ($repeater as $repeaters) : ?>
+                                    <li class="header__cities-item">
+                                        <a class="header__cities-link" href="<?php echo $repeaters['header__cities-link']?>">
+                                            <?php echo $repeaters['header__cities-item']?>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </ul>
                     </div>
                     <div class="header__nav-box">
@@ -254,16 +244,16 @@
                         <?php my_nav_menu([ 'theme_location'  => 'top4' ]); ?>
                     </nav>
                     <div class="header__contacts">
-                        <a class="header__phone" href="tel:+48737106566">
-                            +48 (737) 106-566
+                        <a class="header__phone" href="tel:<?php the_field('header__phone', 10) ?>">
+                            <?php the_field('header__phone', 10) ?>
                         </a>
-                        <a class="header__mail" href="mailto:sales@cleanupcompany.ru">
-                            sales@cleanupcompany.ru
+                        <a class="header__mail" href="mailto:<?php the_field('header__mail', 10) ?>">
+                            <?php the_field('header__mail', 10) ?>
                         </a>
                     </div>
                     </div>
-                    <a class="header__button header-button" href="#">
-                        Консультация
+                    <a class="header__button header-button <?php the_field('header-button-class', 10) ?>" href="#" <?php the_field('header-button-data', 10) ?>>
+                        <?php the_field('header-button', 10) ?>
                     </a>
                     <div class="header__burger-menu">
                         <div class="container">
@@ -280,24 +270,20 @@
                                     <div class="header__inner-mobail">
                                         <div class="header__block-mobail">
                                             <div class="header__burger-socials">
-                                                <a class="header__burger-social" href="#">
-                                                    <img class="header__burger-social-img"
-                                                         src="<?php bloginfo('template_directory'); ?>/assets/img/header/1.svg"
-                                                         alt="alt">
-                                                </a>
-                                                <a class="header__burger-social" href="#">
-                                                    <img class="header__burger-social-img"
-                                                         src="<?php bloginfo('template_directory'); ?>/assets/img/header/2.svg"
-                                                         alt="alt">
-                                                </a>
-                                                <a class="header__burger-social" href="#">
-                                                    <img class="header__burger-social-img"
-                                                         src="<?php bloginfo('template_directory'); ?>/assets/img/header/3.svg"
-                                                         alt="alt">
-                                                </a>
+                                                <?php $repeater = get_field('header__burger-socials', 10); ?>
+
+                                                <?php if ($repeater) : ?>
+                                                    <?php foreach ($repeater as $repeaters) : ?>
+                                                        <a class="header__burger-social" href="<?php echo $repeaters['header__burger-social']?>">
+                                                            <img class="header__burger-social-img"
+                                                                 src="<?php echo $repeaters['header__burger-social-img']?>"
+                                                                 alt="alt">
+                                                        </a>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
                                             </div>
-                                            <a class="header__burger-btn" href="#">
-                                                Консультация
+                                            <a class="header__burger-btn <?php the_field('header-button-class', 10) ?>" <?php the_field('header-button-data', 10) ?> href="#" >
+                                                <?php the_field('header-button', 10) ?>
                                             </a>
                                         </div>
                                     </div>
@@ -307,7 +293,7 @@
                                         Услуги
                                         <a class="header__burger-logo" href="/">
                                             <img class="header__burger-logo-img"
-                                                 src="<?php bloginfo('template_directory'); ?>/assets/img/header/logo-menu.svg"
+                                                 src="<?php the_field('header__burger-logo-img', 10) ?>"
                                                  alt="Logo">
                                         </a>
                                         <img class="header__burger-close js__header-burgerclick"
